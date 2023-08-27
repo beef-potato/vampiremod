@@ -1,0 +1,66 @@
+{
+  "${modID}:EventID": {
+    "NAME": "Event Name",
+    "DESCRIPTIONS": [
+      "This is event text, generally used to describe what's happening.",
+      "#g~This~ #g~text~ #g~is~ #g~green~ #g~and~ #g~wavy.~",
+      "#r@RED@ #r@AND@ #r@VIBRATING@ #r@TEXT.@",
+      "#rRed #gGreen #yYellow #bBlue #pPurple. ~Wavy~ @vibrating.@",
+      "You have to mark every word individually.",
+      "You can also use [#ffffff]white[] hex color codes like this to color text.",
+      "This also works in card text! But not on keywords."
+    ],
+    "OPTIONS": [
+      "[Action Description] What you actually get.",
+      "[Denial] #rLose #r1 #rMax #rHP. Bad stuff is red.",
+      "[Acceptance] #gGain #gApotheosis. Good stuff is green.",
+      "[Leave]",
+      "Select card to remove. (You can also stick extra text like this in here.)"
+    ]
+  },
+  "${modID}:Vampire village": {
+    "NAME": "吸血鬼之村",
+    "DESCRIPTIONS": [
+      "你进入一个村庄，发现这里的居民都是 #r@吸血鬼@ NL 村庄中心的空地上矗立着 #r主 的 ~塑像~ NL 前面对塑像, 你决定...",
+      "内心传来一阵刺痛，痛苦消失后，你觉得自己有了新的潜力",
+      "你低下头，快步离开了这里"
+    ],
+    "OPTIONS": [
+      "[祈祷] #r失去 #r",
+      "生命. #g获得 #g",
+      "#点最大生命",
+      "[献祭] #r失去 #r",
+      "#生命, #g获得 #g60 #g金币.",
+      "[离开]"
+
+    ]
+  },
+  "${modID}:Fountain of Releasing": {
+    "NAME": "放松之泉",
+    "DESCRIPTIONS": [
+      "你经过墙壁上的一处饮水池，里面流淌着源源不断 #b~闪着光的水~ 。",
+      "你喝下 #b~水~ 后，感觉到身体中不再有 #p原初的束缚 。",
+      "你仍然不知道这水从何而来，但解渴之后，你重新踏上了旅程。"
+    ],
+    "OPTIONS": [
+      "[喝水] #g移除所有打击防御。",
+      "[离开]"
+
+    ]
+  },
+  "State Room": {
+    "NAME": "塑像房",
+    "DESCRIPTIONS": [
+      "你来到一个房间，发现中心立着一个圣像，圣像边上供着一个盛有血液的杯子",
+      "你闭眼 #y祷告 ，掉下许多金币",
+      "你 #y取走 了圣杯，手碰到杯子时，发现自己被划伤了，你觉得 #r~恍惚~ ,有让它继续划伤你的想法……",
+      "你头也不回地离开了这里"
+    ],
+    "OPTIONS": [
+      "[祷告] #g获得 #g",
+      " #g金币",
+      "[取走] #r失去 #r5 #r最大生命, #g获得 #g蓄血圣杯",
+      "[离开] "
+    ]
+  }
+}

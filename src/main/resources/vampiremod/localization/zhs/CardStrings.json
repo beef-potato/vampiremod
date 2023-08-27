@@ -1,0 +1,349 @@
+{
+  "${modID}:ExampleCard": {
+    "NAME": "Name",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "If you change the constructor of your card to use super(cardInfo, true); this will be the card's description when it is upgraded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:IronWave": {
+    "NAME": "铁斩波",
+    "DESCRIPTION": "获得 !B! 点 格挡 NL 造成 !D! 点伤害"
+  },
+  "${modID}:Focus": {
+    "NAME": "孤注一掷",
+    "DESCRIPTION": "受到 4 点伤害 NL 造成 !D! 点伤害 !M! 次 NL 消耗"
+  },
+  "${modID}:Rampage_V": {
+    "NAME": "暴走",
+    "DESCRIPTION": "受到 2 点伤害 NL 造成 !D! 点伤害，抽 1 张牌，这张卡本场战斗伤害加 !M!"
+  },
+  "${modID}:Hemokinesis": {
+    "NAME": "御血术",
+    "DESCRIPTION": "受到 2 点伤害 NL 造成 !D! 点伤害"
+  },
+  "${modID}:Lookaround": {
+    "NAME": "环顾",
+    "DESCRIPTION": "受到 2 点伤害 NL 消耗1张手牌 抽 !M! 张牌"
+  },
+  "${modID}:Extraction": {
+    "NAME": "血气提炼",
+    "DESCRIPTION": "受到 3 点伤害 NL 获得 !M! 点 力量"
+  },
+  "${modID}:Train": {
+    "NAME": "训练",
+    "DESCRIPTION": "受到 2 点伤害 NL 每回合开始，获得 !M! 点 活力 ."
+  },
+  "${modID}:Block": {
+    "NAME": "防御",
+    "DESCRIPTION": "受到 1 点伤害 NL 获得 !B! 点 格挡"
+  },
+  "${modID}:Swallow": {
+    "NAME": "敲骨吸髓",
+    "DESCRIPTION": "受到 2 点伤害 NL 造成 !D! 点伤害 ，若 斩杀，则获得 !M! 点最大生命"
+  },
+  "${modID}:Rupture_B": {
+    "NAME": "撕裂",
+    "DESCRIPTION": "每当从卡牌中受到伤害，获得 !M! 点 力量"
+  },
+  "${modID}:BloodLetting_B": {
+    "NAME": "放血",
+    "DESCRIPTION": "受到 3 点伤害 NL 获得 [E] [E] ",
+    "UPGRADE_DESCRIPTION": "受到 3 点伤害 NL 获得 [E] [E] [E]"
+  },
+  "${modID}:Limitbreak_B": {
+    "NAME": "突破极限",
+    "DESCRIPTION": "受到 2 点伤害 NL 力量翻倍 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "受到 2 点伤害 NL 力量翻倍 NL"
+  },
+  "${modID}:Nevermind": {
+    "NAME": "漠视",
+    "DESCRIPTION": "受到 2 点伤害 NL 获得 !B! 点 格挡 NL 抽 !M! 张牌"
+  },
+  "${modID}:Batform": {
+    "NAME": "蝙蝠形态",
+    "DESCRIPTION": "获得 !M! 层 飞行"
+  },
+  "${modID}:Trinity": {
+    "NAME": "三位一体",
+    "DESCRIPTION": "受到 6 点伤害 NL 抽 !M! 张牌 NL 进入 神格 NL 下回合死亡"
+  },
+  "${modID}:Mysophobia": {
+    "NAME": "洁癖",
+    "DESCRIPTION": "每回合开始失去 2 点生命，抽 !M! 张牌 NL 消耗最多 !M! 张牌"
+  },
+  "${modID}:Ridofevil": {
+    "NAME": "除秽务尽",
+    "DESCRIPTION": "失去 2 点生命，消耗卡组中所有非攻击牌，每张获得 !M! 点 格挡"
+  },
+  "${modID}:Conservation": {
+    "NAME": "生命守恒",
+    "DESCRIPTION": "额外回复造成的未被格挡的伤害 20% 的生命"
+  },
+  "${modID}:Simplelife": {
+    "NAME": "平淡是真",
+    "DESCRIPTION": "获得 !M! 点 再生"
+  },
+  "${modID}:Flap": {
+    "NAME": "振翅",
+    "DESCRIPTION": " 获得 !B! 点 格挡 NL 获得 !M! 点 ${modID}:熟悉 "
+  },
+  "${modID}:Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "失去 1 点生命值 NL 造成 !D! 点伤害"
+  },
+  "${modID}:Dash": {
+    "NAME": "冲撞",
+    "DESCRIPTION": "失去 2 点生命值 NL 造成 !D! 点伤害 NL 给予 !M! 层 易伤 1 层 虚弱"
+  },
+  "${modID}:Batgroup": {
+    "NAME": "群起而攻",
+    "DESCRIPTION": "失去 2 点生命值 NL 对全体敌方造成 !D! 点伤害 !M! 次"
+  },
+  "${modID}:Bloodtransfer": {
+    "NAME": "血液转换",
+    "DESCRIPTION": "失去 !M! 点生命值 NL 获得 1 瓶随机药水 NL  消耗"
+  },
+  "${modID}:Burnout": {
+    "NAME": "燃尽",
+    "DESCRIPTION": "你的回合结束时，失去1点生命，对所有敌人造成 !M! 点伤害"
+  },
+  "${modID}:Blood_to_gold": {
+    "NAME": "点血为金",
+    "DESCRIPTION": "失去 10 点生命， 获得 !M! 金币 NL 消耗 NL ${modID}:拾起 ：将一张 *傲慢 加入牌组"
+  },
+  "${modID}:Other_skill": {
+    "NAME": "博采众长",
+    "DESCRIPTION": "失去 !M! 点生命， 从任意颜色的三张 技能牌 中选择一张加入 手牌 NL 消耗",
+    "UPGRADE_DESCRIPTION": "失去 !M! 点生命， 从任意颜色的三张 技能牌 中选择一张加入 手牌, 这张牌本回合 耗能 为零 NL 消耗"
+  },
+  "${modID}:Conspiracy": {
+    "NAME": "阴谋",
+    "DESCRIPTION": "失去 3 点生命， 造成 !D! 点伤害，若 斩杀 ，额外回复 !M! 点生命"
+  },
+  "${modID}:Sacrifice": {
+    "NAME": "献祭",
+    "DESCRIPTION": "失去 3 点生命， 对全体敌方造成 !D! 点伤害，在 抽牌堆 加入一张 *腐朽 "
+  },
+  "${modID}:BlackHit": {
+    "NAME":"黑暗攻击",
+    "DESCRIPTION": "失去 3 点生命， 造成 !D! 点群体伤害， 给予敌方全员 !M! 层 虚弱"
+  },
+  "${modID}:Pacifism": {
+    "NAME":"和平主义",
+    "DESCRIPTION": "失去 2 点生命， 场上所有单位失去 !M! 力量 NL 消耗"
+  },
+  "${modID}:Spot_strength": {
+    "NAME":"避其锋芒",
+    "DESCRIPTION": "失去 3 点生命， 若对方意图为攻击，获得 !M! 层 无实体 "
+  },
+  "${modID}:Prepare": {
+    "NAME":"备战",
+    "DESCRIPTION": "失去 !M! 点生命, 造成 !D! 点伤害 NL 若 斩杀 ，随机升级一张牌 NL 消耗 "
+  },
+  "${modID}:CurseEnhance": {
+    "NAME":"诅咒加持",
+    "DESCRIPTION": "当你抽到诅咒牌时，消耗这张牌，抽 !M! 张牌 ",
+    "UPGRADE_DESCRIPTION": "固有 NL 当你抽到诅咒牌时，消耗这张牌，抽 !M! 张牌 "
+  },
+  "${modID}:HealByHand": {
+    "NAME":"以手取之",
+    "DESCRIPTION": "失去 2 点生命 NL 造成 !D! 点伤害，每当敌人受到攻击时，回复 !M! 点生命 NL 消耗"
+  },
+  "${modID}:Venom": {
+    "NAME":"毒牙",
+    "DESCRIPTION": "造成 !D! 点伤害 NL 给予 !M! 层 缓慢"
+  },
+  "${modID}:DEPRECATED Nightfall": {
+    "NAME":"夜幕",
+    "DESCRIPTION": "只有抽牌堆卡牌数为0才能打出，给予敌方全体 !M! 层 中毒 NL 回复 6 点生命"
+  },
+  "${modID}:DieOut": {
+    "NAME":"消亡",
+    "DESCRIPTION": "失去 2 点生命 NL 造成 !D! 点伤害 NL 消耗一张牌，返回手牌 "
+  },
+  "${modID}:BloodArmor": {
+    "NAME":"血铠",
+    "DESCRIPTION": "虚无 NL 失去 2 点生命 NL 获得 !B! 点 格挡"
+  },
+  "${modID}:GunPowder": {
+    "NAME":"火药",
+    "DESCRIPTION": "失去 2 点生命 NL 获得 !B! 点 格挡 。NL 若此牌被消耗，抽 !M! 张牌 。"
+  },
+  "${modID}:Fire": {
+    "NAME":"烈焰",
+    "DESCRIPTION": "失去 2 点生命 NL 消耗所有手牌，每消耗一张牌，获得 !M! 层 *恶魔形态 NL 消耗"
+  },
+  "${modID}:BlackBomb": {
+    "NAME":"黑色炸弹",
+    "DESCRIPTION": "失去 2 点生命 NL 造成 !D! 点群体伤害 NL 若被消耗 造成 !M! 点群体伤害"
+  },
+  "${modID}: DEPRECATED Detonator": {
+    "NAME":"雷管",
+    "DESCRIPTION": "不能被打出 NL 若被消耗， 获得 !M! 点 力量"
+  },
+  "${modID}:BurningBranch": {
+    "NAME":"燃烧树枝",
+    "DESCRIPTION": "不能被打出 NL 若被消耗， 随机添加 !M! 张牌进入手牌 手牌中增加一张本牌复制"
+  },
+  "${modID}:Smoke": {
+    "NAME":"烟雾",
+    "DESCRIPTION": "失去 2 点生命 NL 获得 !B! 点 格挡 NL 若被消耗，获得 !M! 层 *残影 "
+  },
+  "${modID}:Ignite": {
+    "NAME":"点火",
+    "DESCRIPTION": "失去 2 点生命 NL 随机消耗一张牌，造成 !D! 点伤害",
+    "UPGRADE_DESCRIPTION": "失去 2 点生命 NL 消耗一张牌，造成 !D! 点伤害"
+  },
+  "${modID}:BurntCoin": {
+    "NAME":"烧焦硬币",
+    "DESCRIPTION": "失去 1 点生命 NL 抽 1 张牌，若消耗，获得 !M! 金币 "
+  },
+  "${modID}:Gentleman": {
+    "NAME":"绅士",
+    "DESCRIPTION": "失去 2 点生命 NL 若敌人意图为攻击， 击晕 敌人，给予其 !B! 层 格挡 "
+  },
+  "${modID}:Intimidate": {
+    "NAME":"恐吓",
+    "DESCRIPTION": "失去 2 生命，给予敌方全体 !M! 层虚弱 NL 若被消耗，给予敌方全体 !M! 层 虚弱 和 易伤 "
+  },
+  "${modID}:Armament": {
+    "NAME":"武装",
+    "DESCRIPTION": "失去 2 点生命 NL ，获得 !B! 点格挡，升级一张手牌 ",
+    "UPGRADE_DESCRIPTION": "失去 2 点生命 NL ，获得 !B! 点格挡，升级所有手牌 ",
+    "PS": "DEPRECATED"
+  },
+  "${modID}:SuperKick": {
+    "NAME":"超级飞踢",
+    "DESCRIPTION": "失去 2 点生命 NL ，造成 !D! 点伤害，若对方有 易伤 或 虚弱 ，获得 [E] 并抽一张牌 "
+  },
+  "${modID}:Sentinel": {
+    "NAME":"哨卫",
+    "DESCRIPTION": "失去 2 点生命 NL ，获得 !B! 点格挡, 若被消耗，获得 [E] [E] ",
+    "UPGRADE_DESCRIPTION": "失去 2 点生命 NL ，获得 !B! 点格挡, 若被消耗，获得 [E] [E] [E]"
+  },
+  "${modID}:BattleTrance": {
+    "NAME":"战斗专注",
+    "DESCRIPTION": "失去 2 点生命，抽 !M! 张牌，丢弃其中所有非攻击牌"
+  },
+  "${modID}:Coffee": {
+  "NAME":"咖啡",
+  "DESCRIPTION": "保留 NL 获得 !M! 点 活力 NL ${modID}:食物牌 NL 消耗性 !stslib:ex!"
+  },
+  "${modID}:BlackTea": {
+    "NAME":"红茶",
+    "DESCRIPTION": "保留 NL 获得 !M! 点 临时力量 NL ${modID}:食物牌 NL 消耗性 !stslib:ex!"
+  },
+  "${modID}:GreenTea": {
+    "NAME":"绿茶",
+    "DESCRIPTION": "保留 NL 获得 !M! 点 临时敏捷 NL ${modID}:食物牌 NL 消耗性 !stslib:ex!"
+  },
+  "${modID}:MysteryMeat": {
+    "NAME":"神秘的肉",
+    "DESCRIPTION": "保留 NL 回复 !M! 点生命, 60% 概率获得 !M! 点 中毒 NL ${modID}:食物牌 NL 消耗性 !stslib:ex!"
+  },
+  "${modID}:Shortcake": {
+    "NAME":"蛋糕",
+    "DESCRIPTION": "保留 NL 获得 [E] [E] NL 消耗 NL ${modID}:食物牌",
+    "UPGRADE_DESCRIPTION": "保留 NL 获得 [E] [E] [E] NL 消耗 NL ${modID}:食物牌"
+  },
+  "${modID}:CorrosiveGas": {
+    "NAME":"腐蚀酸雾",
+    "DESCRIPTION": "失去 3 点生命, 移除敌方全体 金属化 人工制品 荆棘 多层护甲 NL 消耗"
+  },
+  "${modID}:Tear": {
+    "NAME":"撕扯",
+    "DESCRIPTION": "失去 2 点生命，随机造成 !D! 点伤害 !M! 次"
+  },
+  "${modID}:Boxing": {
+  "NAME":"拳击",
+  "DESCRIPTION": "失去 2 点生命，造成 !D! 点伤害 !M! 次"
+  },
+  "${modID}:Dart": {
+    "NAME":"飞镖",
+    "DESCRIPTION": "无法被打出，当处于手牌时，每打出一张攻击牌，随机造成伤害 !D! 点",
+    "EXTENDED_DESCRIPTION": ["此牌不能被打出"]
+  },
+  "${modID}:Minimalism": {
+    "NAME":"极简主义",
+    "DESCRIPTION": "失去 3 点生命， 消耗 抽牌堆和弃牌堆所有手牌 NL 消耗"
+  },
+  "${modID}:Bacchanalia": {
+    "NAME":"狂欢",
+    "DESCRIPTION": "获得 !M! 点 临时力量和敏捷，获得 [E] [E] , 回合结束时，受到 30 点伤害 NL 消耗"
+  },
+  "${modID}:BloodPact": {
+    "NAME":"血契",
+    "DESCRIPTION": "每当你失去生命，抽 !M! 张牌"
+  },
+  "${modID}:Select": {
+    "NAME":"挑选",
+    "DESCRIPTION": "每回合第一次消耗手牌时，获得 [E] "
+  },
+  "${modID}:Capital": {
+    "NAME":"资本",
+    "DESCRIPTION": "失去 2 点生命 NL 造成 !D! 点伤害 NL 每持有 !M! *金币 ，额外造成一次"
+  },
+  "${modID}:Prey": {
+    "NAME":"猎捕",
+    "DESCRIPTION": "受到 2*X 点伤害， 给予对方 X 层 易伤 , 并失去 X 力量",
+    "UPGRADE_DESCRIPTION": "受到 2*(X+1) 点伤害， 给予对方 X+1 层 易伤 , 并失去 X+1 力量"
+  },
+  "${modID}:Trade": {
+    "NAME":"交易",
+    "DESCRIPTION": "虚无 NL 失去 1/4 *最大生命 ，在战斗奖励中随机获得一个遗物 NL 消耗",
+    "UPGRADE_DESCRIPTION": "虚无 NL 失去 1/5 *最大生命 ，在战斗奖励中随机获得一个遗物 NL 消耗"
+  },
+  "${modID}:Totalitarianism": {
+    "NAME":"极权",
+    "DESCRIPTION": "每回合开始打出抽牌堆顶部 3 张牌，回合结束获得 3 点 格挡"
+  },
+  "${modID}:Hesitate": {
+    "NAME":"踌躇",
+    "DESCRIPTION": "获得 !M! 层 ${modID}:坚不可摧 ，在弃牌堆中加入一张 *凡庸 "
+  },
+  "${modID}:Lie": {
+    "NAME":"谎言",
+    "DESCRIPTION": "失去 3 点生命，造成 !D! 点伤害。 可以多次升级"
+  },
+  "${modID}:Truth": {
+    "NAME":"真理",
+    "DESCRIPTION": "失去 3 点生命，造成 !D! 点伤害 !M! 次。 可以多次升级"
+  },
+  "${modID}:BeatBack": {
+    "NAME":"反击",
+    "DESCRIPTION": "只有生命值低于 !M! %最大生命才能被打出， 造成 !D! 点伤害",
+    "EXTENDED_DESCRIPTION": ["目前还相当健康"]
+  },
+  "${modID}:BloodShelter": {
+    "NAME":"血之加护",
+    "DESCRIPTION": "每次失去生命值，获得 !M! 点格挡"
+  },
+  "${modID}:Foodie": {
+    "NAME":"美食家",
+    "DESCRIPTION": "不能被打出 NL 每当你使用一张 ${modID}:食物牌 ，获得 [E] ，抽 !M! 张牌",
+    "EXTENDED_DESCRIPTION": ["此牌不能被打出"]
+  },
+  "${modID}:Cook": {
+    "NAME":"厨师",
+    "DESCRIPTION": "失去3点生命 NL 每回合开始，获得一张随机 ${modID}:食物牌"
+  },
+  "${modID}:RecklessCharge": {
+    "NAME":"无谋冲锋",
+    "DESCRIPTION": "失去1点生命 NL 造成 !D! 点伤害。向抽牌堆加入一张 *笨拙"
+  },
+  "${modID}:DeusExMachina": {
+    "NAME":"机械降神",
+    "DESCRIPTION": "不能被打出 NL 当你抽到这张牌，获得 10 点 临时生命， 获得 [E] NL 消耗",
+    "UPGRADE_DESCRIPTION": "不能被打出 NL 当你抽到这张牌，获得 10 点 临时生命， 获得 [E] [E] NL 消耗"
+  },
+  "${modID}:Roulette": {
+    "NAME":"轮盘赌",
+    "DESCRIPTION": "抽到时，随机对场上一个单位造成 !D! 点伤害, 弃置本牌",
+    "UPGRADE_DESCRIPTION": "抽到时，随机对场上一个单位造成 !M! 点伤害，弃置本牌 NL 玩家概率为原先的 !M! %"
+  }
+
+}

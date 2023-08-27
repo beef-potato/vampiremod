@@ -1,0 +1,40 @@
+{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },
+  "${modID}:Tusk": {
+    "NAME": "獠牙",
+    "FLAVOR": "残留着些许血液",
+    "DESCRIPTIONS": [
+      "当你造成未被格挡的伤害， 吸取 #b 30%",
+      "的生命值."
+    ]
+  },
+  "${modID}:EnhancedTusk": {
+    "NAME": "强化獠牙",
+    "FLAVOR": "激发狩猎本能",
+    "DESCRIPTIONS": [
+      "替换 #r獠牙, 当你造成未被格挡的伤害， 吸取 #b",
+      "%的生命值"
+    ]
+  },
+  "${modID}:DemoIdol": {
+    "NAME": "恶魔神像",
+    "FLAVOR": "做一些……交易",
+    "DESCRIPTIONS": [
+      "每场战斗限一次，右击该遗物，失去 5 生命，获得 #b 50 金币"
+    ]
+  },
+  "${modID}:HolyCup": {
+    "NAME": "蓄血圣杯",
+    "FLAVOR": "杯子上有一些尖刺",
+    "DESCRIPTIONS": [
+      "右击该遗物，失去4*(圣杯等级的平方)点生命，将圣杯升级。每经过一定数量的楼层，回复 #b",
+      "HP, 现在等级为 #b"
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "${modID}:PowerID": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "${modID}:MysophobiaPower": {
+    "NAME": "洁癖",
+    "DESCRIPTIONS": [
+      "每回合开始时， 失去 #b ",
+      "点生命。抽 #b ",
+      "牌，最多消耗 #b",
+      "张牌"
+    ]
+  },
+  "${modID}:ConservationPower": {
+    "NAME": "生命守恒",
+    "DESCRIPTIONS": [
+      "额外回复造成的未被格挡的伤害 20% 的生命"
+    ]
+  },
+  "${modID}:Fullstate": {
+    "NAME": "完全体",
+    "DESCRIPTIONS": [
+      "回复等量造成的未被格挡的伤害"
+    ]
+  },
+  "${modID}:FamiliarPower": {
+    "NAME": "熟悉",
+    "DESCRIPTIONS": [
+      "获得 #b 10 层 #y 熟悉 时，进入 #y 完全体 "
+    ]
+  },
+  "${modID}:Prey mark": {
+    "NAME": "猎物印记",
+    "DESCRIPTIONS": ["被标记的敌人在被攻击时，将给予你等量生命值回复"]
+  },
+  "${modID}:BurnoutPower": {
+    "NAME": "燃尽",
+    "DESCRIPTIONS":[
+      "每次失去2生命, 获得 #g",
+      "力量"
+    ]
+  },
+  "${modID}:CurseEnhancePower": {
+    "NAME": "诅咒加持",
+    "DESCRIPTIONS":[
+  "当你抽到诅咒牌时，抽",
+      "张牌"
+    ]
+  },
+  "${modID}:HealByHandPower": {
+    "NAME": "以手取之",
+    "DESCRIPTIONS":[
+      "每当受到攻击时，回复玩家 #g",
+      "点生命"
+    ]
+  },
+  "${modID}:BacchanaliaPower": {
+    "NAME": "狂欢",
+    "DESCRIPTIONS":[
+      "回合结束时，受到 #y",
+      "点伤害"
+    ]
+  },
+  "${modID}:BloodPactPower": {
+    "NAME": "血契",
+    "DESCRIPTIONS":[
+      "每当你失去生命， 抽 #y",
+      "张牌"
+    ]
+  },
+  "${modID}:SelectPower": {
+    "NAME": "选择",
+    "DESCRIPTIONS":[
+      "每回合第一次消耗牌时，获得 [E]"
+    ]
+  },
+  "${modID}:BloodShelterPower": {
+    "NAME": "血之加护",
+    "DESCRIPTIONS":[
+      "每当你失去生命， 获得 #y",
+      "点格挡"
+    ]
+  },
+  "${modID}:TrainPower": {
+    "NAME": "训练",
+    "DESCRIPTIONS":["每回合开始获得 #y","活力"]
+  },
+  "${modID}:CookPower": {
+    "NAME": "厨师",
+    "DESCRIPTIONS":["每回合开始，获得一张随机食物牌"]
+  }
+}
