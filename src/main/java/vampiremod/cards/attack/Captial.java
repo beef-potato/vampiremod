@@ -43,7 +43,7 @@ public class Captial extends BaseCard {
 
     public Captial() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
-        setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it increases when upgraded.
+        setDamage(DAMAGE); //Sets the card's damage and how much it increases when upgraded.
         setMagic(MAGIC, -20);
     }
 

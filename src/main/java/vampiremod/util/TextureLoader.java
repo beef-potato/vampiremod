@@ -3,7 +3,10 @@ package vampiremod.util;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.utils.GdxRuntimeException;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 import java.util.HashMap;
@@ -101,4 +104,6 @@ public class TextureLoader {
         String textureString = powerPath("large/" + powerName + ".png");
         return getTextureNull(textureString);
     }
+
+
 }

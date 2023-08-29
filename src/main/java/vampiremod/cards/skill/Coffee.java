@@ -42,13 +42,13 @@ public class Coffee extends BaseCard{
     //These will be used in the constructor. Technically you can just use the values directly,
     //but constants at the top of the file are easy to adjust.
     private static final int MAGIC_AMOUNT = 5;
-    private static final int UPG_MAGIC_AMOUNT = 8;
+    private static final int UPG_MAGIC_AMOUNT = 3;
 
     public Coffee() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
         setMagic(MAGIC_AMOUNT, UPG_MAGIC_AMOUNT);
         setSelfRetain(true, true);
-        ExhaustiveVariable.setBaseValue(this, 3);
+        ExhaustiveVariable.setBaseValue(this, 2);
         tags.add(Vampire.CustomTags.FOOD);
     }
 

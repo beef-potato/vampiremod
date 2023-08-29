@@ -43,7 +43,7 @@
   },
   "${modID}:Swallow": {
     "NAME": "敲骨吸髓",
-    "DESCRIPTION": "受到 2 点伤害 NL 造成 !D! 点伤害 ，若 斩杀，则获得 !M! 点最大生命"
+    "DESCRIPTION": "受到 2 点伤害 NL 造成 !D! 点伤害 ，若 斩杀，则获得 !M! 点最大生命 NL 消耗"
   },
   "${modID}:Rupture_B": {
     "NAME": "撕裂",
@@ -155,7 +155,7 @@
   },
   "${modID}:Venom": {
     "NAME":"毒牙",
-    "DESCRIPTION": "造成 !D! 点伤害 NL 给予 !M! 层 缓慢"
+    "DESCRIPTION": "造成 !D! 点伤害 NL 给予 !M! 层 缓慢 NL 消耗性 !stslib:ex!"
   },
   "${modID}:DEPRECATED Nightfall": {
     "NAME":"夜幕",
@@ -171,7 +171,7 @@
   },
   "${modID}:GunPowder": {
     "NAME":"火药",
-    "DESCRIPTION": "失去 2 点生命 NL 获得 !B! 点 格挡 。NL 若此牌被消耗，抽 !M! 张牌 。"
+    "DESCRIPTION": "失去 2 点生命 NL 获得 !B! 点 格挡 NL 若此牌被消耗，抽 !M! 张牌 。"
   },
   "${modID}:Fire": {
     "NAME":"烈焰",
@@ -239,7 +239,7 @@
   },
   "${modID}:GreenTea": {
     "NAME":"绿茶",
-    "DESCRIPTION": "保留 NL 获得 !M! 点 临时敏捷 NL ${modID}:食物牌 NL 消耗性 !stslib:ex!"
+    "DESCRIPTION": "保留 NL 获得 !M! 点 临时敏捷 NL ${modID}:食物牌 NL 消耗"
   },
   "${modID}:MysteryMeat": {
     "NAME":"神秘的肉",
@@ -289,8 +289,8 @@
   },
   "${modID}:Prey": {
     "NAME":"猎捕",
-    "DESCRIPTION": "受到 2*X 点伤害， 给予对方 X 层 易伤 , 并失去 X 力量",
-    "UPGRADE_DESCRIPTION": "受到 2*(X+1) 点伤害， 给予对方 X+1 层 易伤 , 并失去 X+1 力量"
+    "DESCRIPTION": "受到 2*X 点伤害， 给予对方 X 层 易伤 , 并失去 X 力量 NL 消耗",
+    "UPGRADE_DESCRIPTION": "受到 2*(X+1) 点伤害， 给予对方 X+1 层 易伤 , 并失去 X+1 力量 NL 消耗"
   },
   "${modID}:Trade": {
     "NAME":"交易",

@@ -1,13 +1,14 @@
 package vampiremod.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import vampiremod.cards.skill.*;
+import vampiremod.cards.tempCards.GreenTea;
+import vampiremod.cards.tempCards.MysteryMeat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,8 +57,6 @@ public class CookPower extends BasePower implements CloneablePowerInterface {
         Random random = new Random();
         return random.nextInt(5);
     }
-
-
 
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;

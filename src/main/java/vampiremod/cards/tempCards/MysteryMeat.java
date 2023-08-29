@@ -1,4 +1,4 @@
-package vampiremod.cards.skill;
+package vampiremod.cards.tempCards;
 
 import character.Vampire;
 import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
@@ -23,9 +23,10 @@ public class MysteryMeat extends BaseCard{
             CardType.SKILL, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
             CardTarget.SELF, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to
             // what you want to see what to use.
-            CardRarity.COMMON, //Rarity. BASIC is for starting cards, then there's COMMON/UNCOMMON/RARE, and then SPECIAL
+            CardRarity.SPECIAL, //Rarity. BASIC is for starting cards, then there's COMMON/UNCOMMON/RARE, and then SPECIAL
             // and CURSE. SPECIAL is for cards you only get from events. Curse is for curses, except for special curses like Curse of the Bell and Necronomicurse.
-            Vampire.Enums.CARD_COLOR //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
+            CardColor.COLORLESS //The card color. If you're making your own character, it'll look something like this.
+            // Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
     );
     //This is theoretically optional, but you'll want it. The ID is how you refer to the card.
     //For example, to add a card to the starting deck, you need to use its ID.
