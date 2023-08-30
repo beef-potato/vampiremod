@@ -37,8 +37,8 @@ public class Pacifism extends BaseCard {
     //but constants at the top of the file are easy to adjust.
     private static final int HP_LOST = 2;
 
-    private static final int LOSE_AMOUNT = -5;
-    private static final int UPG_LOSE_AMOUNT = -3;
+    private static final int LOSE_AMOUNT = -3;
+    private static final int UPG_LOSE_AMOUNT = -2;
 
     public Pacifism() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.

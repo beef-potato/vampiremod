@@ -134,7 +134,7 @@
   },
   "${modID}:Pacifism": {
     "NAME":"和平主义",
-    "DESCRIPTION": "失去 2 点生命， 场上所有单位失去 !M! 力量 NL 消耗"
+    "DESCRIPTION": "失去 2 点生命， 场上所有单位获得 !M! 力量 NL 消耗"
   },
   "${modID}:Spot_strength": {
     "NAME":"避其锋芒",
@@ -146,8 +146,8 @@
   },
   "${modID}:CurseEnhance": {
     "NAME":"诅咒加持",
-    "DESCRIPTION": "当你抽到诅咒牌时，消耗这张牌，抽 !M! 张牌 ",
-    "UPGRADE_DESCRIPTION": "固有 NL 当你抽到诅咒牌时，消耗这张牌，抽 !M! 张牌 "
+    "DESCRIPTION": "每回合第一次抽到诅咒牌时，消耗这张牌，抽 !M! 张牌 ",
+    "UPGRADE_DESCRIPTION": "固有 NL 每回合第一次抽到诅咒牌时，消耗这张牌，抽 !M! 张牌 "
   },
   "${modID}:HealByHand": {
     "NAME":"以手取之",
@@ -187,7 +187,8 @@
   },
   "${modID}:BurningBranch": {
     "NAME":"燃烧树枝",
-    "DESCRIPTION": "不能被打出 NL 若被消耗， 随机添加 !M! 张牌进入手牌 手牌中增加一张本牌复制"
+    "DESCRIPTION": "不能被打出 NL 若被消耗， 随机添加 !M! 张牌进入手牌 手牌中增加一张本牌复制",
+    "EXTENDED_DESCRIPTION": ["此牌不能被打出"]
   },
   "${modID}:Smoke": {
     "NAME":"烟雾",
@@ -264,7 +265,7 @@
   },
   "${modID}:Dart": {
     "NAME":"飞镖",
-    "DESCRIPTION": "无法被打出，当处于手牌时，每打出一张攻击牌，随机造成伤害 !D! 点",
+    "DESCRIPTION": "不能被打出 NL 处于手牌时，每打出一张攻击牌，随机造成 !D! 点伤害",
     "EXTENDED_DESCRIPTION": ["此牌不能被打出"]
   },
   "${modID}:Minimalism": {
@@ -294,8 +295,8 @@
   },
   "${modID}:Trade": {
     "NAME":"交易",
-    "DESCRIPTION": "虚无 NL 失去 1/4 *最大生命 ，在战斗奖励中随机获得一个遗物 NL 消耗",
-    "UPGRADE_DESCRIPTION": "虚无 NL 失去 1/5 *最大生命 ，在战斗奖励中随机获得一个遗物 NL 消耗"
+    "DESCRIPTION": "虚无 NL 失去 1/ !M! *最大生命的生命值 ，在战斗奖励中随机获得一个遗物 NL 消耗",
+    "UPGRADE_DESCRIPTION": "虚无 NL 失去 1/ !M! *最大生命的生命值 ，在战斗奖励中随机获得一个遗物 NL 消耗"
   },
   "${modID}:Totalitarianism": {
     "NAME":"极权",

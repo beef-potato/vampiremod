@@ -8,8 +8,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import vampiremod.cards.BaseCard;
 import vampiremod.util.CardInfo;
 
@@ -51,8 +49,9 @@ public class DieOut extends BaseCard {
         addToBot(new ExhaustAction(Exhaust_NUM, false));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-
-        addToBot(new DiscardToHandAction(this));
+    }
+    public void onMoveToDiscard() {
+        addToBot(new DiscardToHandAction(DieOut.this));
     }
 
     @Override

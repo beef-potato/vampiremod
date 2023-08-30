@@ -29,14 +29,22 @@ public class CurseEnhancePower extends BasePower implements CloneablePowerInterf
     public CurseEnhancePower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
+    private boolean triggeredThisTurn = false;
+
+    public void atStartOfTurn() {
+        this.triggeredThisTurn = false;
+    }
 
     public void onCardDraw(AbstractCard card) {
-        if (card.type == AbstractCard.CardType.CURSE && !this.owner.hasPower("No Draw")) {
+        if (card.type == AbstractCard.CardType.CURSE && !this.owner.hasPower("No Draw") && !triggeredThisTurn) {
+            triggeredThisTurn = true;
             flash();
             addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
             addToBot(new DrawCardAction(this.owner, this.amount));
         }
     }
+
+
 
     public void updateDescription() {
     this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];

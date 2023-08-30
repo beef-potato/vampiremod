@@ -46,7 +46,7 @@
   "${modID}:CurseEnhancePower": {
     "NAME": "诅咒加持",
     "DESCRIPTIONS":[
-  "当你抽到诅咒牌时，抽",
+  "每回合第一次抽到诅咒牌时，抽",
       "张牌"
     ]
   },

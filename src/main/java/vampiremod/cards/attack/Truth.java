@@ -62,6 +62,9 @@ public class Truth extends BaseCard {
     public void upgrade() {
         ++this.timesUpgraded;
         this.upgraded = true;
+        if(this.timesUpgraded == 1){
+            this.upgradeDamage(-3);
+        }
         this.name = cardStrings.NAME + "+" + this.timesUpgraded;
 //        this.magicNumber = this.timesUpgraded + TRUTH_TIMES;
         this.upgradeMagicNumber(TRUTH_TIMES);

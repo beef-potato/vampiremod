@@ -31,7 +31,7 @@ public class Trade extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int MAGIC_AMOUNT = 4;
+    private static final int MAGIC_AMOUNT = 2;
     private static final int UPG_MAGIC_AMOUNT = 1;
 
     public Trade() {
@@ -45,7 +45,7 @@ public class Trade extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.player.decreaseMaxHealth(p.maxHealth / magicNumber);
+        addToBot(new LoseHPAction(p, p, p.maxHealth/magicNumber));
 
         double temp  = generateRandomDecimal();
         if (temp < 0.70){
