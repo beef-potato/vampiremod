@@ -44,14 +44,15 @@ public class SpotStrength extends BaseCard {
     public SpotStrength() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
         setMagic(GAIN_AMOUNT, UPG_GAIN_AMOUNT);
+        setExhaust(true,true);
         }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new LoseHPAction(p, p, HP_LOST));
         addToBot(new SpotStrengthAction(magicNumber, m));
-
     }
+
     @Override
     public AbstractCard makeCopy() {
         return new SpotStrength();

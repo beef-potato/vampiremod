@@ -138,7 +138,7 @@
   },
   "${modID}:Spot_strength": {
     "NAME":"避其锋芒",
-    "DESCRIPTION": "失去 3 点生命， 若对方意图为攻击，获得 !M! 层 无实体 "
+    "DESCRIPTION": "失去 3 点生命， 若对方意图为攻击，获得 !M! 层 无实体 NL 消耗"
   },
   "${modID}:Prepare": {
     "NAME":"备战",
