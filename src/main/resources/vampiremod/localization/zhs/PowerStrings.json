@@ -29,19 +29,12 @@
   "${modID}:FamiliarPower": {
     "NAME": "熟悉",
     "DESCRIPTIONS": [
-      "获得 #b 10 层 #y 熟悉 时，进入 #y 完全体 "
+      "获得 #b 10 层 #y 熟悉 时，获得 1 层 灵体 "
     ]
   },
   "${modID}:Prey mark": {
     "NAME": "猎物印记",
     "DESCRIPTIONS": ["被标记的敌人在被攻击时，将给予你等量生命值回复"]
-  },
-  "${modID}:BurnoutPower": {
-    "NAME": "燃尽",
-    "DESCRIPTIONS":[
-      "每次失去2生命, 获得 #g",
-      "力量"
-    ]
   },
   "${modID}:CurseEnhancePower": {
     "NAME": "诅咒加持",

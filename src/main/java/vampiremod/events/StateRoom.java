@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.relics.Circlet;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
-import vampiremod.relics.HolyCup;
+import vampiremod.relics.ChaliceofBlood;
 
 
 public class StateRoom extends AbstractImageEvent {
@@ -58,10 +58,10 @@ public class StateRoom extends AbstractImageEvent {
                    case 1:
 
 
-                       if (AbstractDungeon.player.hasRelic(HolyCup.ID)) {
+                       if (AbstractDungeon.player.hasRelic(ChaliceofBlood.ID)) {
                            this.relicMetric = RelicLibrary.getRelic(Circlet.ID).makeCopy();
                        } else {
-                           this.relicMetric = RelicLibrary.getRelic(HolyCup.ID).makeCopy();
+                           this.relicMetric = RelicLibrary.getRelic(ChaliceofBlood.ID).makeCopy();
                        }
                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((Settings.WIDTH/2), (Settings.HEIGHT/2),
                                this.relicMetric);

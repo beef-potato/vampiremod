@@ -1,5 +1,7 @@
 # vampiremod
 
+Steam work shop : https://steamcommunity.com/sharedfiles/filedetails/?id=3020984032
+
 ## Preamble
 
 This repository contains a mod developed by me for **Slay the spire**. The mod introduces a new character, the Vampire,

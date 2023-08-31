@@ -17,5 +17,20 @@
       "[Leave]",
       "Select card to remove. (You can also stick extra text like this in here.)"
     ]
+  },
+  "State Room": {
+    "NAME": "State Room",
+    "DESCRIPTIONS": [
+      "In a shabby Room, you find a statue in the center, along with a chalice containing some blood.",
+      "Closing your eyes, you  #ypray, and it's raining #ygolds!",
+      "You #ytake the #rchalice. As you touch it, you get incised and feel  #r~dizzy~ , want to offer more...",
+      "You head away, no time to waste"
+    ],
+    "OPTIONS": [
+      "[pray] #ggain #g",
+      " #ggold",
+      "[take] #rlose #r5 #rmaxHP, #ggain #gChalice #gof #gBlood",
+      "[leave] "
+    ]
   }
 }

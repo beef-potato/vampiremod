@@ -5,5 +5,36 @@
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn. [E] is an energy icon."
     ]
+  },
+  "${modID}:Tusk": {
+    "NAME": "Tusk",
+    "FLAVOR": "some blood remains",
+    "DESCRIPTIONS": [
+      "when you deal unblocked damage, take #b 30%",
+      " as HP recover"
+    ]
+  },
+  "${modID}:EnhancedTusk": {
+    "NAME": "EnhancedTusk",
+    "FLAVOR": "Trigger the hunting instinct",
+    "DESCRIPTIONS": [
+      "replace #rTusk, when you deal unblocked damage, take #b ",
+      "% as HP recover"
+    ]
+  },
+  "${modID}:DemoIdol": {
+    "NAME": "恶魔神像",
+    "FLAVOR": "做一些……交易",
+    "DESCRIPTIONS": [
+      "每场战斗限一次,右击该遗物,失去 5 生命,获得 #b 50 金币"
+    ]
+  },
+  "${modID}:ChaliceofBlood": {
+    "NAME": "Chalice of Blood",
+    "FLAVOR": "There are some spine on the chalice",
+    "DESCRIPTIONS": [
+      "Right-click on this relic to lose 4 times the square of the chalice's level of health and upgrade the chalice. After passing a certain number of floors, restore #b",
+      "HP, now at level #b "
+    ]
   }
 }

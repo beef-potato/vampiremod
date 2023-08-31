@@ -1,16 +1,332 @@
 {
-  "${modID}:ExampleCard": {
-    "NAME": "Name",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "If you change the constructor of your card to use super(cardInfo, true); this will be the card's description when it is upgraded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+  "${modID}:IronWave": {
+    "NAME": "Iron Wave",
+    "DESCRIPTION": "Gain !B!   Block NL deal !D!  damage "
   },
-  "${modID}:MyCard": {
-    "NAME": "Not Iron Wave",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
+  "${modID}:Focus": {
+    "NAME": "Focus",
+    "DESCRIPTION": "lose 4 HP  NL deal !D!  damage  !M! times NL Exhaust"
+  },
+  "${modID}:Rampage_V": {
+    "NAME": "Rampage",
+    "DESCRIPTION": "lose 2 HP  NL deal !D! damage , draw 1 card, increase this card's damage by !M! this combat"
+  },
+  "${modID}:Hemokinesis": {
+    "NAME": "Hemokinesis",
+    "DESCRIPTION": "lose 2 HP  NL deal !D! damage "
+  },
+  "${modID}:Lookaround": {
+    "NAME": "Look around",
+    "DESCRIPTION": "lose 2 HP NL Exhaust 1 card , draw !M! cards"
+  },
+  "${modID}:Extraction": {
+    "NAME": "Extraction",
+    "DESCRIPTION": "lose 3 HP  NL Gain !M!  Strength"
+  },
+  "${modID}:Train": {
+    "NAME": "Train",
+    "DESCRIPTION": "lose 2 HP  NL Gain !M! Vigor every turn ."
+  },
+  "${modID}:Block": {
+    "NAME": "Defend",
+    "DESCRIPTION": "lose 1 HP NL Gain !B!   Block"
+  },
+  "${modID}:Swallow": {
+    "NAME": "Feed",
+    "DESCRIPTION": "lose 2 HP  NL deal !D! damage  , if Fatal , raise your Max HP by !M! NL Exhaust"
+  },
+  "${modID}:Rupture_B": {
+    "NAME": "Rupture",
+    "DESCRIPTION": " Whenever you lose hp from a card , Gain !M! Strength"
+  },
+  "${modID}:BloodLetting_B": {
+    "NAME": "Bloodletting",
+    "DESCRIPTION": "lose 3 HP  NL Gain [E] [E] ",
+    "UPGRADE_DESCRIPTION": "lose 3 HP  NL Gain [E] [E] [E]"
+  },
+  "${modID}:Limitbreak_B": {
+    "NAME": "Limit Break",
+    "DESCRIPTION": "lose 2 HP  NL double your Strength NL Exhaust ",
+    "UPGRADE_DESCRIPTION": "lose 2 HP  NL double your Strength"
+  },
+  "${modID}:Nevermind": {
+    "NAME": "Shrug it Off",
+    "DESCRIPTION": "lose 2 HP  NL Gain !B!  Block NL draw !M! cards"
+  },
+  "${modID}:Batform": {
+    "NAME": "Bat Form",
+    "DESCRIPTION": "Gain !M! Flight"
+  },
+  "${modID}:Trinity": {
+    "NAME": "Trinity",
+    "DESCRIPTION": "lose 6 HP  NL draw !M! cards NL enter Divinity NL die next turn"
+  },
+  "${modID}:Mysophobia": {
+    "NAME": "Mysophobia",
+    "DESCRIPTION": "At the start of turn lose 2 HP , draw !M! cards NL Exhaust at most !M! cards"
+  },
+  "${modID}:Ridofevil": {
+    "NAME": "Second Wind",
+    "DESCRIPTION": "lose 2 HP , Exhaust all non-Attack cards in your hand. Gain !B! Block for each card Exhausted."
+  },
+  "${modID}:Conservation": {
+    "NAME": "Conservation",
+    "DESCRIPTION": "Take 20% additional life recover from unblocked damage"
+  },
+  "${modID}:Simplelife": {
+    "NAME": "Simple life",
+    "DESCRIPTION": "Gain !M! Regeneration"
+  },
+  "${modID}:Flap": {
+    "NAME": "Flap",
+    "DESCRIPTION": " Gain !B!   Block NL Gain !M!  ${modID}:Familiar "
+  },
+  "${modID}:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "lose 1  HP NL deal !D!  damage "
+  },
+  "${modID}:Dash": {
+    "NAME": "Dash",
+    "DESCRIPTION": "lose 2  HP NL deal !D!   damage  NL Apply !M!  Vulnerable 1  Weak"
+  },
+  "${modID}:Batgroup": {
+    "NAME": "Bat group",
+    "DESCRIPTION": "lose 2   HP NL deal !D!   damage to ALL enemies  !M! times"
+  },
+  "${modID}:Bloodtransfer": {
+    "NAME": "Blood Transfer",
+    "DESCRIPTION": "lose !M!   HP NL Gain 1 random potion NL  Exhaust"
+  },
+  "${modID}:Burnout": {
+    "NAME": "Burn out",
+    "DESCRIPTION": "at end of your turn ,lose 1 HP deal  !M!   damage  to ALL enemies"
+  },
+  "${modID}:Blood_to_gold": {
+    "NAME": "Blood to Gold",
+    "DESCRIPTION": "lose 10  HP,  Gain !M! Golds NL Exhaust NL ${modID}:Pickup , add one *Pride in your deck"
+  },
+  "${modID}:Other_skill": {
+    "NAME": "Other's skill",
+    "DESCRIPTION": "lose !M!  HP,  Choose 1 of 3 Skills of any color to add into your hand. NL Exhaust. ",
+    "UPGRADE_DESCRIPTION": "lose !M!  HP,  Choose 1 of 3 Attacks of any color to add into your hand. NL It costs 0 this turn. NL Exhaust"
+  },
+  "${modID}:Conspiracy": {
+    "NAME": "Conspiracy",
+    "DESCRIPTION": "lose 3  HP,  deal !D!   damage , if Fatal , recover extra !M!  HP"
+  },
+  "${modID}:Sacrifice": {
+    "NAME": "Sacrifice",
+    "DESCRIPTION": "lose 3  HP,  deal !D!   damage to ALL enemies , add one  *Decay to draw pile"
+  },
+  "${modID}:BlackHit": {
+    "NAME":"Black Hit",
+    "DESCRIPTION": "lose 3  HP,  deal !D! damage to ALL enemies ,  Apply !M!  Weak to ALL enemies"
+  },
+  "${modID}:Pacifism": {
+    "NAME":"Pacifism",
+    "DESCRIPTION": "lose 2  HP,  ALL targets Gain !M! Strength NL Exhaust"
+  },
+  "${modID}:Spot_strength": {
+    "NAME":"Spot Strength",
+    "DESCRIPTION": "lose 3  HP,  If the enemy intends to attack, gain !M! intangible NL Exhaust"
+  },
+  "${modID}:Prepare": {
+    "NAME":"Prepare",
+    "DESCRIPTION": "lose !M!  HP, deal !D!   damage  NL If Fatal , upgrade a random card in your deck NL Exhaust "
+  },
+  "${modID}:CurseEnhance": {
+    "NAME":"Curse Enhance",
+    "DESCRIPTION": "When you draw a Curse at the first time of this turn , Exhaust this card , draw !M! cards ",
+    "UPGRADE_DESCRIPTION": "Innate When you draw a Curse at the first time of this turn , Exhaust this card , draw !M! cards "
+  },
+  "${modID}:HealByHand": {
+    "NAME":"Heal by Hand",
+    "DESCRIPTION": "lose 2  HP NL deal !D!  damage , when this enemy is attacked , gain !M!  HP NL Exhaust"
+  },
+  "${modID}:Venom": {
+    "NAME":"Venom",
+    "DESCRIPTION": "deal !D!   damage  NL Apply !M! * NL Exhaustive !stslib:ex!"
+  },
+  "${modID}:DieOut": {
+    "NAME":"Die Out",
+    "DESCRIPTION": "lose 2  HP NL deal !D!   damage  NL Exhaust one card, return to hand "
+  },
+  "${modID}:BloodArmor": {
+    "NAME":"Blood Armor",
+    "DESCRIPTION": "Ethereal NL lose 2  HP NL Gain !B!   Block"
+  },
+  "${modID}:GunPowder": {
+    "NAME":"Gun Powder",
+    "DESCRIPTION": "lose 2  HP NL Gain !B!   Block NL if Exhausted , draw !M! cards . "
+  },
+  "${modID}:Fire": {
+    "NAME":"Fire",
+    "DESCRIPTION": "lose 2  HP NL Exhaust all cards in hand , each cards give you !M! *Demo *Form NL Exhaust"
+  },
+  "${modID}:BlackBomb": {
+    "NAME":"Black Bomb",
+    "DESCRIPTION": "lose 2  HP NL deal !D!  damage to ALL enemies  NL if Exhausted, deal !M! damage to ALL enemies "
+  },
+  "${modID}:BurningBranch": {
+    "NAME":"Burning Branch",
+    "DESCRIPTION": "Unplayable NL if Exhausted ,  add  !M! random cards and a copy of this card in your hand , ",
+    "EXTENDED_DESCRIPTION": ["Unplayable"]
+  },
+  "${modID}:Smoke": {
+    "NAME":"Smoke",
+    "DESCRIPTION": "lose 2  HP NL Gain !B!   Block NL if Exhausted , Your block won't be removed at the start of next turn "
+  },
+  "${modID}:Ignite": {
+    "NAME":"Ignite",
+    "DESCRIPTION": "lose 2  HP NL randomly Exhaust one card  , deal !D!   damage ",
+    "UPGRADE_DESCRIPTION": "lose 2  HP NL Exhaust one card , deal !D!   damage "
+  },
+  "${modID}:BurntCoin": {
+    "NAME":"Burnt Coin",
+    "DESCRIPTION": "lose 1  HP NL draw 1 cards, if Exhausted , Gain !M! Golds "
+  },
+  "${modID}:Gentleman": {
+    "NAME":"Gentleman",
+    "DESCRIPTION": "lose 2  HP NL If the enemy intends to attack, stun it  NL give it !B! Block "
+  },
+  "${modID}:Intimidate": {
+    "NAME":"Intimidate",
+    "DESCRIPTION": "lose 2 HP, Apply !M! Weak to ALL enemies NL if Exhausted , Apply !M!  Weak and Vulnerable to ALL enemies"
+  },
+  "${modID}:Armament": {
+    "NAME":"Armament",
+    "DESCRIPTION": "lose 2  HP NL , Gain !B!  Block, 升级一张手牌 ",
+    "UPGRADE_DESCRIPTION": "lose 2  HP NL , Gain !B!  Block, 升级所有手牌 ",
+    "PS": "DEPRECATED"
+  },
+  "${modID}:SuperKick": {
+    "NAME":"Super Kick",
+    "DESCRIPTION": "lose 2  HP NL , deal !D!   damage , if the enemy has Vulnerable or Weak , Gain [E] and draw one card "
+  },
+  "${modID}:Sentinel": {
+    "NAME":"Sentinel",
+    "DESCRIPTION": "lose 2  HP NL , Gain !B!  Block, if Exhausted , Gain [E] [E] ",
+    "UPGRADE_DESCRIPTION": "lose 2  HP NL , Gain !B!  Block, if Exhaust, Gain [E] [E] [E]"
+  },
+  "${modID}:BattleTrance": {
+    "NAME":"Battle Trance",
+    "DESCRIPTION": "lose 2  HP, draw !M! cards, discard all non-attack cards"
+  },
+  "${modID}:Coffee": {
+  "NAME":"Coffee",
+  "DESCRIPTION": "Retain NL Gain !M!   Vigor NL ${modID}:Food NL Exhaustive !stslib:ex!"
+  },
+  "${modID}:BlackTea": {
+    "NAME":"BlackTea",
+    "DESCRIPTION": "Retain NL Gain !M!   temp Strength NL ${modID}:Food NL Exhaustive !stslib:ex!"
+  },
+  "${modID}:GreenTea": {
+    "NAME":"GreenTea",
+    "DESCRIPTION": "Retain NL Gain !M!  temp Dexterity NL ${modID}:Food NL Exhaust"
+  },
+  "${modID}:MysteryMeat": {
+    "NAME":"Mystery Meat",
+    "DESCRIPTION": "Retain NL gain !M!  HP, 60% Gain !M! poison NL ${modID}:Food NL Exhaustive !stslib:ex!"
+  },
+  "${modID}:Shortcake": {
+    "NAME":"Short cake",
+    "DESCRIPTION": "Retain NL Gain [E] [E] NL Exhaust NL ${modID}:Food",
+    "UPGRADE_DESCRIPTION": "Retain NL Gain [E] [E] [E] NL Exhaust NL ${modID}:Food"
+  },
+  "${modID}:CorrosiveGas": {
+    "NAME":"Corrosive Gas",
+    "DESCRIPTION": "lose 3  HP, remove ALL enemies' Metallicize, Artifact, Thorns, Plated Armor NL Exhaust"
+  },
+  "${modID}:Tear": {
+    "NAME":"Tear",
+    "DESCRIPTION": "lose 2  HP,  randomly deal !D!   damage  !M! times"
+  },
+  "${modID}:Boxing": {
+  "NAME":"Boxing",
+  "DESCRIPTION": "lose 2  HP, deal !D! damage  !M! times"
+  },
+  "${modID}:Dart": {
+    "NAME":"Dart",
+    "DESCRIPTION": "Unplayable NL when in your hand, every time you play an attack , randomly deal !D!  damage ",
+    "EXTENDED_DESCRIPTION": ["it's Unplayable"]
+  },
+  "${modID}:Minimalism": {
+    "NAME":"Minimalism",
+    "DESCRIPTION": "lose 3  HP,  Exhaust ALL cards in draw pile and discard pile NL Exhaust"
+  },
+  "${modID}:Bacchanalia": {
+    "NAME":"Bacchanalia",
+    "DESCRIPTION": "Gain !M!   temp Strength and Dexterity, Gain [E] [E] NL at the end of your turn, take 30 damage  NL Exhaust"
+  },
+  "${modID}:BloodPact": {
+    "NAME":"Blood Pact",
+    "DESCRIPTION": "when lose HP, draw !M! card"
+  },
+  "${modID}:Select": {
+    "NAME":"Select",
+    "DESCRIPTION": "when you exhaust card the first time in your turn, Gain [E] "
+  },
+  "${modID}:Capital": {
+    "NAME":"Capital",
+    "DESCRIPTION": "lose 2  HP NL deal !D!   damage  NL every !M! *Golds you take , deal damage once"
+  },
+  "${modID}:Prey": {
+    "NAME":"Prey",
+    "DESCRIPTION": "lose 2*X   HP ,  Apply  X  Vulnerable and X Strength lost to the enemy NL Exhaust",
+    "UPGRADE_DESCRIPTION": "lose 2*(X+1)   HP ,  Apply  X+1  Vulnerable and X+1 Strength lost to the enemy NL Exhaust"
+  },
+  "${modID}:Trade": {
+    "NAME":"Trade",
+    "DESCRIPTION": "Ethereal NL lose HP equals to 1/ !M!  *Max HP , gain a random relic in the battle rewards NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Ethereal NL lose HP equals to 1/ !M!  *Max HP , gain a random relic in the battle rewards NL Exhaust"
+  },
+  "${modID}:Totalitarianism": {
+    "NAME":"Totalitarianism",
+    "DESCRIPTION": "At the start of your turn, play the first 3 cards in your draw pile, Gain 3   Block at the end of your turn"
+  },
+  "${modID}:Hesitate": {
+    "NAME":"Hesitate",
+    "DESCRIPTION": "Gain !M!  ${modID}:Invincible , add one  *Normality in your discard pile "
+  },
+  "${modID}:Lie": {
+    "NAME":"Lie",
+    "DESCRIPTION": "lose 3  HP, deal !D!   damage NL Can be Upgraded any number of times"
+  },
+  "${modID}:Truth": {
+    "NAME":"Truth",
+    "DESCRIPTION": "lose 3  HP, deal !D!   damage  !M! times NL Can be Upgraded any number of times"
+  },
+  "${modID}:BeatBack": {
+    "NAME":"Beat Back",
+    "DESCRIPTION": "Only be played when you have less than !M! % HP,  deal !D!   damage ",
+    "EXTENDED_DESCRIPTION": ["Healthy enough!"]
+  },
+  "${modID}:BloodShelter": {
+    "NAME":"Blood Shelter",
+    "DESCRIPTION": "When lose HP, Gain !M!  Block"
+  },
+  "${modID}:Foodie": {
+    "NAME":"Foodie",
+    "DESCRIPTION": "Unplayable NL When you play a  ${modID}:Food card , Gain [E] , draw !M! card",
+    "EXTENDED_DESCRIPTION": ["Unplayable"]
+  },
+  "${modID}:Cook": {
+    "NAME":"Cook",
+    "DESCRIPTION": "lose3 HP NL At the start of your turn, Gain a random ${modID}:Food card"
+  },
+  "${modID}:RecklessCharge": {
+    "NAME":"Reckless Charge",
+    "DESCRIPTION": "lose1 HP NL deal !D!   damage . add a *Clumsy to your draw pile"
+  },
+  "${modID}:DeusExMachina": {
+    "NAME":"Deus Ex Machina",
+    "DESCRIPTION": "Unplayable NL when you draw this card, Gain 10   tempHP ,  Gain [E] NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Unplayable NL when you draw this card, Gain 10   tempHP,  Gain [E] [E] NL Exhaust"
+  },
+  "${modID}:Roulette": {
+    "NAME":"Roulette",
+    "DESCRIPTION": "when you draw this card, randomly deal !D!   damage to one target in the room , discard itself",
+    "UPGRADE_DESCRIPTION": "when you draw this card, randomly deal !D!  damage to one target in the room , discard itself NL The player has  !M! % chance compare to the original"
   }
+
 }

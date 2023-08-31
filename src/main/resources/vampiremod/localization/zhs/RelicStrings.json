@@ -29,7 +29,7 @@
       "每场战斗限一次，右击该遗物，失去 5 生命，获得 #b 50 金币"
     ]
   },
-  "${modID}:HolyCup": {
+  "${modID}:ChaliceofBlood": {
     "NAME": "蓄血圣杯",
     "FLAVOR": "杯子上有一些尖刺",
     "DESCRIPTIONS": [

@@ -1,11 +1,8 @@
 package vampiremod.relics;
 
 import character.Vampire;
-import com.evacipated.cardcrawl.mod.stslib.patches.HitboxRightClick;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
@@ -15,8 +12,9 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 import static vampiremod.vampiremod.makeID;
 
-public class HolyCup extends BaseRelic implements ClickableRelic {
-    private static final String NAME = "HolyCup"; //The name will be used for determining the image file as well as
+public class ChaliceofBlood extends BaseRelic implements ClickableRelic {
+    private static final String NAME = "ChaliceofBlood"; //The name will be used for determining the image file as
+    // well as
     // the
     // ID.
     public static final String ID = makeID(NAME); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
@@ -25,7 +23,7 @@ public class HolyCup extends BaseRelic implements ClickableRelic {
     private static int CUP_LEVEL = 0;
     private static final int HEAL_AMOUNT = 8;
 
-    public HolyCup() {
+    public ChaliceofBlood() {
         super(ID, NAME, Vampire.Enums.CARD_COLOR, RARITY, SOUND);
 }
     public void onEquip() {
@@ -88,6 +86,6 @@ public class HolyCup extends BaseRelic implements ClickableRelic {
     @Override
     public AbstractRelic makeCopy()
     {
-        return new HolyCup();
+        return new ChaliceofBlood();
     }
 }

@@ -4,5 +4,95 @@
     "DESCRIPTIONS": [
       "You are Very Cool and Strong."
     ]
+  },
+  "${modID}:MysophobiaPower": {
+    "NAME": "Mysophobia",
+    "DESCRIPTIONS": [
+      "At the start of your turn, lose #b ",
+      "HP. draw #b ",
+      "cards, exhaust at most #b",
+      "cards"
+    ]
+  },
+  "${modID}:ConservationPower": {
+    "NAME": "Conservation",
+    "DESCRIPTIONS": [
+      "Take 20% additional HP recover from unblocked damage"
+    ]
+  },
+  "${modID}:Fullstate": {
+    "NAME": "完全体",
+    "DESCRIPTIONS": [
+      "回复等量造成的未被格挡的伤害"
+    ]
+  },
+  "${modID}:FamiliarPower": {
+    "NAME": "Familiar",
+    "DESCRIPTIONS": [
+      "when you gain 10 Familiar, gain 1 intangible"
+    ]
+  },
+  "${modID}:Prey mark": {
+    "NAME": "Prey mark",
+    "DESCRIPTIONS": ["when this enemy is attacked, each stack of this debuff heal you  1 HP "]
+  },
+  "${modID}:CurseEnhancePower": {
+    "NAME": "Curse Enhance",
+    "DESCRIPTIONS":[
+      "When you draw a Curse at the first time of this turn , Exhaust this card , draw #b ",
+      "cards"
+    ]
+  },
+  "${modID}:HealByHandPower": {
+    "NAME": "Heal By Hand",
+    "DESCRIPTIONS":[
+      "When attacked, heal player #b ",
+      "HP"
+    ]
+  },
+  "${modID}:BacchanaliaPower": {
+    "NAME": "Bacchanalia",
+    "DESCRIPTIONS":[
+      "At end of your turn, take #y",
+      "damage"
+    ]
+  },
+  "${modID}:BloodPactPower": {
+    "NAME": "Blood Pact",
+    "DESCRIPTIONS":[
+      "When lose HP, draw #y",
+      "cards"
+    ]
+  },
+  "${modID}:SelectPower": {
+    "NAME": "Select",
+    "DESCRIPTIONS":[
+      "The first time to exhaust  card, gain [E]"
+    ]
+  },
+  "${modID}:BloodShelterPower": {
+    "NAME": "Blood Shelter",
+    "DESCRIPTIONS":[
+      "When lose HP, gain #y",
+      "Block"
+    ]
+  },
+  "${modID}:TrainPower": {
+    "NAME": "Train",
+    "DESCRIPTIONS":["At the start of your turn, gain #y","Vigor"]
+  },
+  "${modID}:CookPower": {
+    "NAME": "Cook",
+    "DESCRIPTIONS":["At the start of your turn, gain a random Food"]
+  },
+  "${modID}:DfInvinciblePower": {
+    "NAME": "Invincible",
+    "DESCRIPTIONS":[
+      "Caps all damage and HP loss taken to #b",
+      " in a turn. Removed after activation.",
+      "Caps all damage and HP loss taken to #b",
+      " in a turn. Removed after #b",
+      " activations."
+    ]
   }
 }

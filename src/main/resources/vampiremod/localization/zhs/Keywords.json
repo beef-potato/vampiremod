@@ -21,15 +21,6 @@
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest should use _ to replace spaces and be entirely lowercase. In card text, you'll use the underscore versions."
   },
   {
-    "PROPER_NAME": "ConservationPower",
-    "NAMES": [
-      "Multiword Keyword",
-      "multiword_keyword",
-      "multiword_keywords"
-    ],
-    "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest should use _ to replace spaces and be entirely lowercase. In card text, you'll use the underscore versions."
-  },
-  {
     "PROPER_NAME": "熟悉",
     "NAMES": [
       "熟悉"
@@ -47,7 +38,7 @@
   "PROPER_NAME": "食物牌",
   "NAMES": [
     "食物牌",
-    "food"
+    "Food"
   ],
   "DESCRIPTION": "带保留词条的0费增益牌"
   },

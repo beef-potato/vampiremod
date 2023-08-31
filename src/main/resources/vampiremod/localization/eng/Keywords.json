@@ -19,5 +19,49 @@
       "multiword_keywords"
     ],
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest should use _ to replace spaces and be entirely lowercase. In card text, you'll use the underscore versions."
-  }
+  },
+  {
+    "PROPER_NAME": "Familiar",
+    "NAMES": [
+      "familiar"
+    ],
+    "DESCRIPTION": "when you gain 10 Familiar, gain 1 *intangible"
+  },
+  {
+    "PROPER_NAME": "Pickup",
+    "NAMES": [
+      "pickup",
+      "拾起"
+    ],
+    "DESCRIPTION": "happens when you add card to your deck"
+  },{
+  "PROPER_NAME": "Food",
+  "NAMES": [
+    "food",
+    "食物牌"
+  ],
+  "DESCRIPTION": "some 0 cost retain cards"
+}, {
+  "PROPER_NAME": "Invincible",
+  "NAMES": [
+    "invincible",
+    "坚不可摧"
+  ],
+  "DESCRIPTION": "You cannot lose more than a given amount of HP in a single turn. NL At the end of any round in which Invincible prevented HP loss, remove it."
+},  {
+  "PROPER_NAME": "Temporary HP",
+  "ID": "temp_hp",
+  "NAMES": [
+    "temp hp",
+    "temp_hp"
+  ],
+  "DESCRIPTION": "Until end of combat, prevents damage to HP."
+},  {
+  "PROPER_NAME": "Blur",
+  "ID": "blur",
+  "NAMES": [
+    "blur"
+  ],
+  "DESCRIPTION": "#yBlock is not removed at the start of your turn."
+}
 ]
