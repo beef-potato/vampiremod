@@ -22,11 +22,13 @@
       "% as HP recover"
     ]
   },
-  "${modID}:DemoIdol": {
-    "NAME": "恶魔神像",
-    "FLAVOR": "做一些……交易",
+  "${modID}:IVBag": {
+    "NAME": "IV Bag",
+    "FLAVOR": "If you can give me any ...",
     "DESCRIPTIONS": [
-      "每场战斗限一次,右击该遗物,失去 5 生命,获得 #b 50 金币"
+      "#rCannot use in Combat Room NL Right click the relic to #rlose #r",
+      " HP #ggain #g",
+      " #ggolds"
     ]
   },
   "${modID}:ChaliceofBlood": {
@@ -35,6 +37,21 @@
     "DESCRIPTIONS": [
       "Right-click on this relic to lose 4 times the square of the chalice's level of health and upgrade the chalice. After passing a certain number of floors, restore #b",
       "HP, now at level #b "
+    ]
+  },
+  "${modID}:BloodCore": {
+    "NAME": "Blood Core",
+    "FLAVOR": "You feel the massive energy in it",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. At the start of combat, shuffle #b2 #rInjury into your draw pile."
+    ]
+  },
+  "${modID}:BloodShield": {
+    "NAME": "Blood Shield",
+    "FLAVOR": "Unusual benefit",
+    "DESCRIPTIONS": [
+      "At the start of combat, give you #g",
+      " #gTempHP"
     ]
   }
 }

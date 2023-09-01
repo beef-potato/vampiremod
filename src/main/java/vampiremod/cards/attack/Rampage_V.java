@@ -56,9 +56,10 @@ public class Rampage_V extends BaseCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
                 AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 
+        addToBot(new ModifyDamageAction(this.uuid, magicNumber));
+
         addToBot(new DrawCardAction(p, CARD_DRAW));
 
-        addToBot(new ModifyDamageAction(this.uuid, magicNumber));
 //this.uuid is copy-paste from original code.
     }
     @Override

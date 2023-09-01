@@ -22,11 +22,13 @@
       "%的生命值"
     ]
   },
-  "${modID}:DemoIdol": {
-    "NAME": "恶魔神像",
-    "FLAVOR": "做一些……交易",
+  "${modID}:IVBag": {
+    "NAME": "献血袋",
+    "FLAVOR": "如果有多余的血液……",
     "DESCRIPTIONS": [
-      "每场战斗限一次，右击该遗物，失去 5 生命，获得 #b 50 金币"
+      "#r无法在战斗房间使用 NL 右击该遗物，失去 #r ",
+      "生命，获得 #b ",
+      "金币"
     ]
   },
   "${modID}:ChaliceofBlood": {
@@ -35,6 +37,21 @@
     "DESCRIPTIONS": [
       "右击该遗物，失去4*(圣杯等级的平方)点生命，将圣杯升级。每经过一定数量的楼层，回复 #b",
       "HP, 现在等级为 #b"
+    ]
+  },
+  "${modID}:BloodShield": {
+    "NAME": "血之盾",
+    "FLAVOR": "难得的回馈",
+    "DESCRIPTIONS": [
+      "每场战斗开始，获得 #g ",
+      " #g临时生命"
+    ]
+  },
+  "${modID}:BloodCore": {
+    "NAME": "血能核心",
+    "FLAVOR": "你感受到其中蕴含的强大能量",
+    "DESCRIPTIONS": [
+      "每回合开始时，获得 [E]. 每场战斗开始时，抽牌堆中加入 2 张 #r受伤 "
     ]
   }
 }
