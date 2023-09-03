@@ -239,7 +239,7 @@
   },
   "${modID}:Tear": {
     "NAME":"Tear",
-    "DESCRIPTION": "lose 2  HP,  randomly deal !D!   damage  !M! times"
+    "DESCRIPTION": "lose 2  HP,  randomly deal !D!   damage  !M! times NL add two *Injury into your hand"
   },
   "${modID}:Boxing": {
   "NAME":"Boxing",

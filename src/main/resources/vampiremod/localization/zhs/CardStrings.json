@@ -257,7 +257,7 @@
   },
   "${modID}:Tear": {
     "NAME":"撕扯",
-    "DESCRIPTION": "失去 2 点生命，随机造成 !D! 点伤害 !M! 次"
+    "DESCRIPTION": "失去 2 点生命，随机造成 !D! 点伤害 !M! 次 NL 手牌中加入两张 *受伤"
   },
   "${modID}:Boxing": {
   "NAME":"拳击",

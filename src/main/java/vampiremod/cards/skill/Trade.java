@@ -31,7 +31,7 @@ public class Trade extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int MAGIC_AMOUNT = 2;
+    private static final int MAGIC_AMOUNT = 3;
     private static final int UPG_MAGIC_AMOUNT = 1;
 
     public Trade() {

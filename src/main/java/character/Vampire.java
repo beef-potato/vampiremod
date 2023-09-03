@@ -2,12 +2,15 @@ package character;
 
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.SpineAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -46,10 +49,15 @@ public class Vampire extends CustomPlayer {
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
+    //animations
+    private static final String VAMPIRE_SKELETON_ATLAS = characterPath("animation/xixuegui/xixuegui.atlas");
+    private static final String VAMPIRE_SKELETON_SKEL = characterPath("animation/xixuegui/xixuegui.json");
+    private static final String VAMPIRE_ANIMATION = "normal";
+
     //Image file paths
     private static final String SHOULDER_1 = characterPath("shoulder.png"); //Shoulder 1 and 2 are used at rest sites.
     private static final String SHOULDER_2 = characterPath("shoulder2.png");
-    private static final String CORPSE = characterPath("corpse.png"); //Corpse is when you die.
+    private static final String CORPSE = characterPath("corpse3.png"); //Corpse is when you die.
 
     public static class Enums {
         //These are used to identify your character, as well as your character's card color.
@@ -71,17 +79,31 @@ public class Vampire extends CustomPlayer {
     }
 
     public Vampire() {
-        super(NAMES[0], Enums.VAMPIRE,
-                new CustomEnergyOrb(null, null, null), //Energy Orb
-                null, null); //Animation
 
-        initializeClass(characterPath("animation/idle_vampire.png"),
+        super(NAMES[0], Enums.VAMPIRE,
+                new CustomEnergyOrb(null, null, null),  null , null );//Energy Orb
+//                new SpineAnimation("animation/xixuegui/xixuegui.atlas",
+//                        "animation/xixurgui/xixuegui.skel", 1f));
+
+
+        initializeClass((String)null, // origin: characterPath("animation/idle_vampire.png"),
                 SHOULDER_2,
                 SHOULDER_1,
                 CORPSE,
                 getLoadout(),
                 20.0F, -20.0F, 200.0F, 250.0F, //Character hitbox. x y position, then width and height.
                 new EnergyManager(ENERGY_PER_TURN));
+
+        //Animation
+
+        loadAnimation(VAMPIRE_SKELETON_ATLAS, VAMPIRE_SKELETON_SKEL, 1f);
+
+        AnimationState.TrackEntry e = state.setAnimation(0, VAMPIRE_ANIMATION, true);
+        e.setTime(e.getEndTime() * MathUtils.random());
+        this.stateData.setMix("attack", "normal", 0.1F);
+        // can not see the difference between mix and simple normal
+        e.setTimeScale(1.0F);
+
 
         //Location for text bubbles. You can adjust it as necessary later. For most characters, these values are fine.
         dialogX = (drawX + 0.0F * Settings.scale);
@@ -192,6 +214,20 @@ public class Vampire extends CustomPlayer {
     public String getSpireHeartText() {
         return TEXT[1];
     }
+
+
+    public void damage(DamageInfo info) {
+        if ((info.owner != null) && (info.type != DamageInfo.DamageType.THORNS) && (
+                info.output - this.currentBlock > 0) && (info.type != DamageInfo.DamageType.HP_LOSS)) {
+            AnimationState.TrackEntry e =
+                    this.state.setAnimation(0, "attack_left", false);
+            this.state.addAnimation(0, "normal", true, 0.0F);
+            e.setTimeScale(1.0F);
+        }
+        super.damage(info);
+        // it a be-hit damage
+    }
+
     @Override
     public String getVampireText() {
         return TEXT[2]; //Generally, the only difference in this text is how the vampires refer to the player.

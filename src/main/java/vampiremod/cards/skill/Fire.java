@@ -30,8 +30,7 @@ public class Fire extends BaseCard {
     );
 
     public static final String ID = makeID(cardInfo.baseId);
-
-
+    
     private static final int DEMO_AMOUNT = 1;
     private static final int HP_LOST = 2;
     private static final int UPG_HEAL_AMOUNT = 1;
