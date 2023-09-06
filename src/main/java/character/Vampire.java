@@ -2,7 +2,6 @@ package character;
 
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
-import basemod.animations.SpineAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
@@ -15,15 +14,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
 import vampiremod.cards.attack.Dash_V;
+import vampiremod.cards.attack.Stab;
 import vampiremod.cards.attack.Strike_V;
 import vampiremod.cards.skill.Block_V;
 import vampiremod.relics.Tusk;
@@ -51,13 +48,23 @@ public class Vampire extends CustomPlayer {
 
     //animations
     private static final String VAMPIRE_SKELETON_ATLAS = characterPath("animation/xixuegui/xixuegui.atlas");
-    private static final String VAMPIRE_SKELETON_SKEL = characterPath("animation/xixuegui/xixuegui.json");
+    private static final String VAMPIRE_SKELETON_JSON = characterPath("animation/xixuegui/xixuegui.json");
     private static final String VAMPIRE_ANIMATION = "normal";
+
+
+    //reskinContent
+    //take animation url
+//    private static final String VAMPIRE_SKELETON_ATLAS =
+//            (CharacterSelectScreenPatches.characters[0]).skins[CharacterSelectScreenPatches.characters[0].reskinCount].atlasURL;
+//
+//    private static final String VAMPIRE_SKELETON_JSON =
+//            (CharacterSelectScreenPatches.characters[0]).skins[CharacterSelectScreenPatches.characters[0].reskinCount].jsonURL;
+
 
     //Image file paths
     private static final String SHOULDER_1 = characterPath("shoulder.png"); //Shoulder 1 and 2 are used at rest sites.
     private static final String SHOULDER_2 = characterPath("shoulder2.png");
-    private static final String CORPSE = characterPath("corpse3.png"); //Corpse is when you die.
+    private static final String CORPSE = characterPath("corpse.png"); //Corpse is when you die.
 
     public static class Enums {
         //These are used to identify your character, as well as your character's card color.
@@ -95,14 +102,10 @@ public class Vampire extends CustomPlayer {
                 new EnergyManager(ENERGY_PER_TURN));
 
         //Animation
-
-        loadAnimation(VAMPIRE_SKELETON_ATLAS, VAMPIRE_SKELETON_SKEL, 1f);
-
+        loadAnimation(VAMPIRE_SKELETON_ATLAS, VAMPIRE_SKELETON_JSON, 1f); //make render scale = 1f
         AnimationState.TrackEntry e = state.setAnimation(0, VAMPIRE_ANIMATION, true);
-        e.setTime(e.getEndTime() * MathUtils.random());
-        this.stateData.setMix("attack", "normal", 0.1F);
-        // can not see the difference between mix and simple normal
-        e.setTimeScale(1.0F);
+        this.stateData.setMix("yun", "normal", 0.1F);
+        e.setTimeScale(0.9F);
 
 
         //Location for text bubbles. You can adjust it as necessary later. For most characters, these values are fine.
@@ -119,12 +122,13 @@ public class Vampire extends CustomPlayer {
         retVal.add(Strike_V.ID);
         retVal.add(Strike_V.ID);
         retVal.add(Strike_V.ID);
-        retVal.add(Strike_V.ID);
         retVal.add(Block_V.ID);
         retVal.add(Block_V.ID);
         retVal.add(Block_V.ID);
         retVal.add(Block_V.ID);
         retVal.add(Dash_V.ID);
+        retVal.add(Stab.ID);
+
 
         return retVal;
     }
@@ -195,6 +199,7 @@ public class Vampire extends CustomPlayer {
         CardCrawlGame.sound.playA("ATTACK_DAGGER_2", MathUtils.random(-0.2F, 0.2F));
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
     }
+
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
         //Similar to doCharSelectScreenSelectEffect, but used for the Custom mode screen. No shaking.
@@ -220,9 +225,9 @@ public class Vampire extends CustomPlayer {
         if ((info.owner != null) && (info.type != DamageInfo.DamageType.THORNS) && (
                 info.output - this.currentBlock > 0) && (info.type != DamageInfo.DamageType.HP_LOSS)) {
             AnimationState.TrackEntry e =
-                    this.state.setAnimation(0, "attack_left", false);
+                    this.state.setAnimation(0, "yun", false);
             this.state.addAnimation(0, "normal", true, 0.0F);
-            e.setTimeScale(1.0F);
+            e.setTime(0.9F);
         }
         super.damage(info);
         // it a be-hit damage

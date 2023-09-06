@@ -1,0 +1,35 @@
+{  "reskinContent:ReSkin": {
+  "TEXT": [
+    "皮肤",
+    "原版"
+  ]
+},
+  "reskinContent:PortraitAnimation": {
+  "TEXT": [
+    "立绘类型"
+  ]
+},
+  "reskinContent:PortraitAnimationType": {
+    "TEXT": [
+      "静态",
+      "动态",
+      "动态（地例子）"
+    ]
+  },
+  "reskinContent:ReSkinVampire": {
+    "TEXT": [
+      "春之风",
+      "白衣小恶魔",
+      "夜姬的正装",
+      "偶像小恶魔",
+      "以罗伊的赐福"
+    ],
+    "EXTRA_TEXT": [
+      "奉上鲜血与恐惧吧！",
+      "白衣吸血鬼可不会救助敌人哦~",
+      "今天，可要陪人家玩到尽兴才行哦？",
+      "暗夜之演唱会就要开始了！",
+      "来吧！为我们的爱喝彩吧！"
+    ]
+  }
+}

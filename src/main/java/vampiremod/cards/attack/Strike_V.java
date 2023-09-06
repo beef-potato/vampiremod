@@ -35,7 +35,6 @@ public class Strike_V extends BaseCard {
     //but constants at the top of the file are easy to adjust.
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 3;
-    private static final int HP_LOST = 1;
 
     public Strike_V() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
@@ -46,7 +45,6 @@ public class Strike_V extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new LoseHPAction(p, p, HP_LOST));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }

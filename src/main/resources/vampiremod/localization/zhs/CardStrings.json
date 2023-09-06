@@ -19,7 +19,7 @@
   },
   "${modID}:Rampage_V": {
     "NAME": "暴走",
-    "DESCRIPTION": "受到 2 点伤害 NL 造成 !D! 点伤害，抽 1 张牌，这张卡本场战斗伤害加 !M!"
+    "DESCRIPTION": "受到 2 点伤害 NL 造成 !D! 点伤害，这张卡本场战斗伤害加 !M!"
   },
   "${modID}:Hemokinesis": {
     "NAME": "御血术",
@@ -39,7 +39,7 @@
   },
   "${modID}:Block": {
     "NAME": "防御",
-    "DESCRIPTION": "受到 1 点伤害 NL 获得 !B! 点 格挡"
+    "DESCRIPTION": "获得 !B! 点 格挡"
   },
   "${modID}:Swallow": {
     "NAME": "敲骨吸髓",
@@ -93,7 +93,7 @@
   },
   "${modID}:Strike": {
     "NAME": "打击",
-    "DESCRIPTION": "失去 1 点生命值 NL 造成 !D! 点伤害"
+    "DESCRIPTION": "造成 !D! 点伤害"
   },
   "${modID}:Dash": {
     "NAME": "冲撞",
@@ -205,7 +205,7 @@
   },
   "${modID}:Gentleman": {
     "NAME":"绅士",
-    "DESCRIPTION": "失去 2 点生命 NL 若敌人意图为攻击， 击晕 敌人，给予其 !B! 层 格挡 "
+    "DESCRIPTION": "失去 2 点生命 NL 若敌人意图为攻击， 击晕 敌人，给予其 !B! 层 格挡 NL 消耗 "
   },
   "${modID}:Intimidate": {
     "NAME":"恐吓",
@@ -343,8 +343,15 @@
   },
   "${modID}:Roulette": {
     "NAME":"轮盘赌",
-    "DESCRIPTION": "抽到时，随机对场上一个单位造成 !D! 点伤害, 弃置本牌",
-    "UPGRADE_DESCRIPTION": "抽到时，随机对场上一个单位造成 !M! 点伤害，弃置本牌 NL 玩家概率为原先的 !M! %"
+    "DESCRIPTION": "抽到时，随机选择一个单位，若为敌方，造成 !D! 点伤害；若为自己则获得半数格挡 NL 弃置本牌"
+  },
+  "${modID}:Blood": {
+    "NAME":"鲜血",
+    "DESCRIPTION": "保留 NL 回复 !M! 点生命 NL 消耗"
+  },
+  "${modID}:Stab": {
+    "NAME":"穿刺",
+    "DESCRIPTION": "造成 !D! 点伤害 NL 给予 !M! 点 ${modID}:流血 NL 消耗"
   }
 
 }

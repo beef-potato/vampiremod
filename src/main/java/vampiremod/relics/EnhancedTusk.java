@@ -22,14 +22,36 @@ public class EnhancedTusk extends BaseRelic {
     public static final String ID = makeID(NAME); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
     private static final RelicTier RARITY = RelicTier.BOSS; //The relic's rarity./SHOP/STARTER/SPECIAL/UNCOMMON/RARE
     private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
-    private static final float LEACH_RATIO = 40;
+    private static final float LEACH_RATIO = 50;
 
     public EnhancedTusk() {
         super(ID, NAME, Vampire.Enums.CARD_COLOR, RARITY, SOUND);
 }
 
+    public void atBattleStart() {
+        this.counter = 0;
+    }
+
+    public void atTurnStart() {
+        if (!this.grayscale)
+            this.counter++;
+        if (this.counter == 4) {
+            flash();
+//            addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            this.counter = -1;
+            this.grayscale = true;
+        }
+    }
+
+    public void onVictory() {
+        this.counter = -1;
+        this.grayscale = false;
+    }
+
     public void onAttack(final DamageInfo damageInfo, final int n, final AbstractCreature abstractCreature) {
-        if (damageInfo.type == DamageInfo.DamageType.NORMAL && damageInfo.output > 0 && abstractCreature != null && abstractCreature != AbstractDungeon.player) {
+        if (damageInfo.type == DamageInfo.DamageType.NORMAL && damageInfo.output > 0 && abstractCreature != null
+                && abstractCreature != AbstractDungeon.player
+        && !this.grayscale) {
             int healAmount = (int) (n * LEACH_RATIO) / 100;
             if (healAmount < 0) {
                 return;

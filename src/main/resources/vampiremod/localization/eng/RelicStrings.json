@@ -10,7 +10,7 @@
     "NAME": "Tusk",
     "FLAVOR": "some blood remains",
     "DESCRIPTIONS": [
-      "when you deal unblocked damage, take #b 30%",
+      "at the first 3 turns every combat, when you deal unblocked damage, take #b 30%",
       " as HP recover"
     ]
   },
@@ -18,7 +18,7 @@
     "NAME": "EnhancedTusk",
     "FLAVOR": "Trigger the hunting instinct",
     "DESCRIPTIONS": [
-      "replace #rTusk, when you deal unblocked damage, take #b ",
+      "replace #rTusk, at the first 3 turns every combat, when you deal unblocked damage, take #b ",
       "% as HP recover"
     ]
   },

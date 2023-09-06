@@ -40,6 +40,7 @@ public class Gentleman extends BaseCard{
     public Gentleman() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
         setBlock(BLOCK,UPG_BLOCK);
+        setExhaust(true,true);
     }
 
     @Override

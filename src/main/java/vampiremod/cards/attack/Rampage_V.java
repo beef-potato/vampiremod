@@ -25,11 +25,6 @@ public class Rampage_V extends BaseCard {
             // and CURSE. SPECIAL is for cards you only get from events. Curse is for curses, except for special curses like Curse of the Bell and Necronomicurse.
             Vampire.Enums.CARD_COLOR //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
     );
-    //This is theoretically optional, but you'll want it. The ID is how you refer to the card.
-    //For example, to add a card to the starting deck, you need to use its ID.
-    //With this, you can just use 'MyCard.ID'. Without it, you'd have to type out
-    //'yourModID:MyCard' and make sure you don't make any mistakes, and you'd also have to update it
-    //if you decided to change the card's ID.
     public static final String ID = makeID(cardInfo.baseId);
 
     //These will be used in the constructor. Technically you can just use the values directly,
@@ -57,8 +52,6 @@ public class Rampage_V extends BaseCard {
                 AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 
         addToBot(new ModifyDamageAction(this.uuid, magicNumber));
-
-        addToBot(new DrawCardAction(p, CARD_DRAW));
 
 //this.uuid is copy-paste from original code.
     }

@@ -9,7 +9,7 @@
   },
   "${modID}:Rampage_V": {
     "NAME": "Rampage",
-    "DESCRIPTION": "lose 2 HP  NL deal !D! damage , draw 1 card, increase this card's damage by !M! this combat"
+    "DESCRIPTION": "lose 2 HP  NL deal !D! damage , increase this card's damage by !M! this combat"
   },
   "${modID}:Hemokinesis": {
     "NAME": "Hemokinesis",
@@ -187,7 +187,7 @@
   },
   "${modID}:Gentleman": {
     "NAME":"Gentleman",
-    "DESCRIPTION": "lose 2  HP NL If the enemy intends to attack, stun it  NL give it !B! Block "
+    "DESCRIPTION": "lose 2  HP NL If the enemy intends to attack, stun it  NL give it !B! Block NL Exhaust"
   },
   "${modID}:Intimidate": {
     "NAME":"Intimidate",
@@ -325,8 +325,15 @@
   },
   "${modID}:Roulette": {
     "NAME":"Roulette",
-    "DESCRIPTION": "when you draw this card, randomly deal !D!   damage to one target in the room , discard itself",
-    "UPGRADE_DESCRIPTION": "when you draw this card, randomly deal !D!  damage to one target in the room , discard itself NL The player has  !M! % chance compare to the original"
+    "DESCRIPTION": "when you draw this card, randomly deal !D!  damage to one target in the room if target at player, gain 1/2 Block, discard itself"
+  },
+  "${modID}:Blood": {
+    "NAME":"Blood",
+    "DESCRIPTION": "Retain NL heal !M! HP NL Exhaust"
+  },
+  "${modID}:Stab": {
+    "NAME":"Stab",
+    "DESCRIPTION": "deal !D! damage NL deal !M! ${modID}:Bleeding NL Exhaust"
   }
 
 }

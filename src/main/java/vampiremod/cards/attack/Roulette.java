@@ -32,15 +32,12 @@ public class Roulette extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 60;
-    private static final int UPG_DAMAGE = 30;
-    private static final int PLAYER_P = 100;
-    private static final int UPG_PLAYER_P = -10;
+    private static final int DAMAGE = 10;
+    private static final int UPG_DAMAGE = 5;
 
     public Roulette() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it increases when upgraded.
-        setMagic(PLAYER_P, UPG_PLAYER_P);
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -52,17 +49,16 @@ public class Roulette extends BaseCard {
     }
 
     public void triggerWhenDrawn() {
-//        addToBot(new AutoplayCardAction(this, AbstractDungeon.player.hand));
+
         int all_target = create_num();
         Random random = new Random();
         double randomValue = random.nextDouble();
-        double playerPotion =  1.0  / (all_target) * magicNumber / 100;
+        double playerPotion =  1.0  / (all_target)  / 100;
 
         addToBot(new VFXAction(new GrandFinalEffect(), 0.7F));
 
         if (randomValue < playerPotion){
-            addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, damage),
-                    AbstractGameAction.AttackEffect.FIRE));
+            addToBot(new GainBlockAction(AbstractDungeon.player, damage/2));
             // will be better if it is a bullet effect.
         }
         else {
