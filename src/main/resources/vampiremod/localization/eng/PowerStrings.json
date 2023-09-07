@@ -81,9 +81,9 @@
     "NAME": "Train",
     "DESCRIPTIONS":["At the start of your turn, gain #y","Vigor"]
   },
-  "${modID}:CookPower": {
-    "NAME": "Cook",
-    "DESCRIPTIONS":["At the start of your turn, gain a random Food"]
+  "${modID}:DrainagePower": {
+    "NAME": "Drainage",
+    "DESCRIPTIONS":["At the start of your turn, lose 2 HP,  gain a *Blood"]
   },
   "${modID}:DfInvinciblePower": {
     "NAME": "Invincible",

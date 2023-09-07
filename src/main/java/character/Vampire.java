@@ -62,8 +62,8 @@ public class Vampire extends CustomPlayer {
 
 
     //Image file paths
-    private static final String SHOULDER_1 = characterPath("shoulder.png"); //Shoulder 1 and 2 are used at rest sites.
-    private static final String SHOULDER_2 = characterPath("shoulder2.png");
+    private static final String SHOULDER_1 = characterPath("shoulder3.png"); //Shoulder 1 and 2 are used at rest sites.
+    private static final String SHOULDER_2 = characterPath("shoulder3.png");
     private static final String CORPSE = characterPath("corpse.png"); //Corpse is when you die.
 
     public static class Enums {
@@ -105,7 +105,7 @@ public class Vampire extends CustomPlayer {
         loadAnimation(VAMPIRE_SKELETON_ATLAS, VAMPIRE_SKELETON_JSON, 1f); //make render scale = 1f
         AnimationState.TrackEntry e = state.setAnimation(0, VAMPIRE_ANIMATION, true);
         this.stateData.setMix("yun", "normal", 0.1F);
-        e.setTimeScale(0.9F);
+        e.setTimeScale(0.6F);
 
 
         //Location for text bubbles. You can adjust it as necessary later. For most characters, these values are fine.
@@ -227,7 +227,9 @@ public class Vampire extends CustomPlayer {
             AnimationState.TrackEntry e =
                     this.state.setAnimation(0, "yun", false);
             this.state.addAnimation(0, "normal", true, 0.0F);
-            e.setTime(0.9F);
+            e.setTime(0.6F);
+            e.setTimeScale(6f);
+            e.setEndTime(0.33f);
         }
         super.damage(info);
         // it a be-hit damage

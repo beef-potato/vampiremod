@@ -172,9 +172,9 @@
     "DESCRIPTION": "Unplayable NL if Exhausted ,  add  !M! random cards and a copy of this card in your hand , ",
     "EXTENDED_DESCRIPTION": ["Unplayable"]
   },
-  "${modID}:Smoke": {
-    "NAME":"Smoke",
-    "DESCRIPTION": "lose 2  HP NL Gain !B!   Block NL if Exhausted , Your block won't be removed at the start of next turn "
+  "${modID}:Anticoagulant": {
+    "NAME":"Anticoagulant",
+    "DESCRIPTION": "lose 2  HP NL deal !M! ${modID}:Bleeding "
   },
   "${modID}:Ignite": {
     "NAME":"Ignite",
@@ -305,14 +305,15 @@
     "NAME":"Blood Shelter",
     "DESCRIPTION": "When lose HP, Gain !M!  Block"
   },
-  "${modID}:Foodie": {
-    "NAME":"Foodie",
-    "DESCRIPTION": "Unplayable NL When you play a  ${modID}:Food card , Gain [E] , draw !M! card",
+  "${modID}:BloodThirsty": {
+    "NAME":"BloodThirsty",
+    "DESCRIPTION": "Unplayable NL When you play a *Blood , Gain [E] , draw !M! card",
     "EXTENDED_DESCRIPTION": ["Unplayable"]
   },
-  "${modID}:Cook": {
-    "NAME":"Cook",
-    "DESCRIPTION": "lose3 HP NL At the start of your turn, Gain a random ${modID}:Food card"
+  "${modID}:Drainage": {
+    "NAME":"Drainage",
+    "DESCRIPTION": "Gain 1 Strength NL At the start of your turn, lose 2 HP,  gain a *Blood",
+    "UPGRADE_DESCRIPTION": "Innate NL Gain 1 Strength NL At the start of your turn, lose 2 HP,  gain a *Blood"
   },
   "${modID}:RecklessCharge": {
     "NAME":"Reckless Charge",
@@ -334,6 +335,33 @@
   "${modID}:Stab": {
     "NAME":"Stab",
     "DESCRIPTION": "deal !D! damage NL deal !M! ${modID}:Bleeding NL Exhaust"
+  },
+  "${modID}:GreedySword": {
+    "NAME":"Greedy Sword",
+    "DESCRIPTION": "deal !D! damage, every *Blood in Exhaust pile adds 2 damage to the card"
+  },
+  "${modID}:BloodCollect": {
+    "NAME":"Blood Collect",
+    "DESCRIPTION": "Unplayable NL when in hand, you get !M! temp Strength and draw 1 card for every Blood played",
+    "EXTENDED_DESCRIPTION": ["can not play it"]
+  },
+  "${modID}:Haste": {
+    "NAME":"Haste",
+    "DESCRIPTION": "lose 2 HP NL remove target's all ${modID}:Bleeding and take the *Blood NL Exhaust",
+    "EXTENDED_DESCRIPTION": ["No *Bleeding"]
+  },
+  "${modID}:BloodDance": {
+    "NAME":"Blood Dance",
+    "DESCRIPTION": "lose 2 HP, get 1 *Blood, gain !B! Block . NL repeat !M! 次"
+  },
+  "${modID}:Simulate": {
+    "NAME":"Simulate",
+    "DESCRIPTION": "Gain !M! ${modID}:familiar",
+    "UPGRADE_DESCRIPTION": "Innate NL Gain !M!  ${modID}:familiar"
+  },
+  "${modID}:Overdraft": {
+    "NAME":"Overdraft",
+    "DESCRIPTION": "draw !M! cards, Exhaust 1 card NL Exhaust"
   }
 
 }

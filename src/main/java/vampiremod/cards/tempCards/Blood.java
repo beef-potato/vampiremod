@@ -35,6 +35,7 @@ public class Blood extends BaseCard{
         setMagic(MAGIC_AMOUNT, UPG_MAGIC_AMOUNT);
         setSelfRetain(true, true);
         setExhaust(true,true);
+        tags.add(CardTags.HEALING);
     }
 
     @Override

@@ -53,7 +53,7 @@ public class Roulette extends BaseCard {
         int all_target = create_num();
         Random random = new Random();
         double randomValue = random.nextDouble();
-        double playerPotion =  1.0  / (all_target)  / 100;
+        double playerPotion =  1.0  / (all_target);
 
         addToBot(new VFXAction(new GrandFinalEffect(), 0.7F));
 

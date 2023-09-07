@@ -1,25 +1,20 @@
-package vampiremod.cards.skill;
+package vampiremod.cards.tempCards;
 
 import character.Vampire;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.BlurPower;
 import vampiremod.cards.BaseCard;
 import vampiremod.util.CardInfo;
 
 import static vampiremod.vampiremod.makeID;
 
-public class Smoke extends BaseCard{
+public class Shortcake extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
-            "Smoke", //Card ID. Will be prefixed with mod id, so the final ID will be "modID:MyCard" with
+            "Shortcake", //Card ID. Will be prefixed with mod id, so the final ID will be "modID:MyCard" with
             // whatever your mod's ID is.
-            1, //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
+            0, //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
             CardType.SKILL, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
             CardTarget.SELF, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to
             // what you want to see what to use.
@@ -36,35 +31,24 @@ public class Smoke extends BaseCard{
 
     //These will be used in the constructor. Technically you can just use the values directly,
     //but constants at the top of the file are easy to adjust.
-    private static final int BLUR_AMOUNT = 1;
-    private static final int UPG_BLUR_AMOUNT = 1;
-    private static final int BLOCK = 8;
-    private static final int UPG_BLOCK = 3;
-    private static final int HP_LOST = 2;
+    private static final int ENERGY = 2;
+    private static final int UPG_ENERGY = 1;
 
-
-
-    public Smoke() {
+    public Shortcake() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
-        setBlock(BLOCK,UPG_BLOCK);
-        setMagic(BLUR_AMOUNT, UPG_BLUR_AMOUNT);
+        setMagic(ENERGY, UPG_ENERGY);
+        setExhaust(true, true);
+        tags.add(Vampire.CustomTags.FOOD);
+        setSelfRetain(true,true);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new LoseHPAction(p, p, HP_LOST));
-        addToBot(new GainBlockAction(p, p, block));
+        addToBot(new GainEnergyAction(magicNumber));
     }
-
-    public void triggerOnExhaust() {
-
-    addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-            new BlurPower(AbstractDungeon.player, magicNumber)));
-    }
-
     @Override
     public AbstractCard makeCopy() {
-        return new Smoke();
+        return new Shortcake();
     }
 
 }

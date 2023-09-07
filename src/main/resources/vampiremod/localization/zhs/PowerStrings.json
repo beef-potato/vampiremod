@@ -81,9 +81,9 @@
     "NAME": "训练",
     "DESCRIPTIONS":["每回合开始获得 #y","活力"]
   },
-  "${modID}:CookPower": {
-    "NAME": "厨师",
-    "DESCRIPTIONS":["每回合开始，获得一张随机食物牌"]
+  "${modID}:DrainagePower": {
+    "NAME": "死亡计时",
+    "DESCRIPTIONS":["每回合开始，失去 2 点生命， 获得 1 张 *鲜血"]
   },
   "${modID}:DfInvinciblePower": {
     "NAME": "坚不可摧",
