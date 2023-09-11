@@ -52,7 +52,7 @@ public class Sacrifice extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new LoseHPAction(p, p, HP_LOST));
-        addToBot(new DamageAllEnemiesAction(p, damage, this.damageTypeForTurn,
+        addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn,
                 AbstractGameAction.AttackEffect.FIRE));
         addToBot(new MakeTempCardInDrawPileAction(new Decay(), TEMP_AMOUNT, true, true));
     }
