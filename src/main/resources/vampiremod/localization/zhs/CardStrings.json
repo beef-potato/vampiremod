@@ -327,7 +327,7 @@
   },
   "${modID}:Roulette": {
     "NAME":"轮盘赌",
-    "DESCRIPTION": "抽到时，随机选择一个单位，若为敌方，造成 !D! 点伤害；若为自己则获得半数格挡 NL 弃置本牌"
+    "DESCRIPTION": "自动打出 NL 随机选择一个单位，若为敌方，造成 !D! 点伤害；若为自己则获得半数格挡"
   },
   "${modID}:Blood": {
     "NAME":"鲜血",
@@ -339,7 +339,7 @@
   },
   "${modID}:GreedySword": {
     "NAME":"贪欲之剑",
-    "DESCRIPTION": "造成 !D! 点伤害，消耗堆每有一张 *鲜血 ，此牌伤害加 2"
+    "DESCRIPTION": "失去 2 点生命 NL 造成 !D! 点伤害，消耗堆每有一张 *鲜血 ，此牌伤害加 2"
   },
   "${modID}:BloodCollect": {
     "NAME":"鲜血汇集",

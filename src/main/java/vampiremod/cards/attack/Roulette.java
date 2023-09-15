@@ -1,6 +1,7 @@
 package vampiremod.cards.attack;
 
 import character.Vampire;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.AutoplayCardAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -42,14 +43,6 @@ public class Roulette extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-    }
-
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        return false;
-    }
-
-    public void triggerWhenDrawn() {
-
         int all_target = create_num();
         Random random = new Random();
         double randomValue = random.nextDouble();
@@ -65,8 +58,15 @@ public class Roulette extends BaseCard {
             addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
         }
 
-        addToBot(new DiscardSpecificCardAction(this, AbstractDungeon.player.hand));
 
+    }
+
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return true;
+    }
+
+    public void triggerWhenDrawn() {
+        addToBot(new AutoplayCardAction(this, AbstractDungeon.player.hand));
     }
 
     private int create_num() {

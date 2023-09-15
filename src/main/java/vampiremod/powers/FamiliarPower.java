@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
 
 import static vampiremod.vampiremod.makeID;
@@ -30,7 +31,7 @@ public class FamiliarPower extends BasePower implements CloneablePowerInterface 
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
         if (this.amount >= 10) {
-            this.addToBot(new ApplyPowerAction(this.owner , this.owner, new IntangiblePower(this.owner, 1)));
+            this.addToBot(new ApplyPowerAction(this.owner , this.owner, new IntangiblePlayerPower(this.owner, 1)));
             this.amount -= 10;
         }
     }

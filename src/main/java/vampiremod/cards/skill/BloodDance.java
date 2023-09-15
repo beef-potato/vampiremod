@@ -36,9 +36,10 @@ public class BloodDance extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new LoseHPAction(p,p, magicNumber*2));
-        addToBot(new MakeTempCardInHandAction(new Blood(), magicNumber));
+
         for ( int i=0; i < magicNumber; i++){
+            addToBot(new LoseHPAction(p,p, magicNumber*2));
+            addToBot(new MakeTempCardInHandAction(new Blood(), 1));
             addToBot(new GainBlockAction(p,p, block));
         }
     }
