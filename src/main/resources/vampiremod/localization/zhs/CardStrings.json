@@ -11,7 +11,13 @@
   },
   "${modID}:Focus": {
     "NAME": "孤注一掷",
-    "DESCRIPTION": "受到 4 点伤害 NL 造成 !D! 点伤害 !M! 次 NL 消耗"
+    "DESCRIPTION": "你本回合每受到过一次伤害 NL 造成一次 !D! 点伤害",
+    "EXTENDED_DESCRIPTION": [
+      " NL (你本回合受到过",
+      " 次伤害。）",
+      " 次伤害。）"
+    ],
+    "FLAVOR":"使用其他角色时请不要抓这张牌！"
   },
   "${modID}:Rampage_V": {
     "NAME": "暴走",
@@ -151,7 +157,7 @@
   },
   "${modID}:DieOut": {
     "NAME":"消亡",
-    "DESCRIPTION": "失去 2 点生命 NL 造成 !D! 点伤害 NL 消耗一张牌，返回手牌 "
+    "DESCRIPTION": "失去 1 点生命 NL 造成 !D! 点伤害 NL 消耗一张牌，返回手牌 "
   },
   "${modID}:BloodArmor": {
     "NAME":"血铠",
@@ -159,7 +165,7 @@
   },
   "${modID}:GunPowder": {
     "NAME":"火药",
-    "DESCRIPTION": "失去 2 点生命 NL 获得 !B! 点 格挡 NL 若此牌被消耗，抽 !M! 张牌 。"
+    "DESCRIPTION": "失去 2 点生命 NL 获得 !B! 点 格挡 NL 若 ${modID}:贫血 ，抽 !M! 张牌 。"
   },
   "${modID}:Fire": {
     "NAME":"烈焰",
@@ -167,11 +173,7 @@
   },
   "${modID}:BlackBomb": {
     "NAME":"黑色炸弹",
-    "DESCRIPTION": "失去 2 点生命 NL 造成 !D! 点群体伤害 NL 若被消耗 造成 !M! 点群体伤害"
-  },
-  "${modID}: DEPRECATED Detonator": {
-    "NAME":"雷管",
-    "DESCRIPTION": "不能被打出 NL 若被消耗， 获得 !M! 点 力量"
+    "DESCRIPTION": "失去 2 点生命 NL 造成 !D! 点群体伤害 NL 若 ${modID}:贫血 再造成一次"
   },
   "${modID}:BurningBranch": {
     "NAME":"燃烧树枝",
@@ -193,7 +195,7 @@
   },
   "${modID}:Intimidate": {
     "NAME":"恐吓",
-    "DESCRIPTION": "失去 2 生命，给予敌方全体 !M! 层虚弱 NL 若被消耗，给予敌方全体 !M! 层 虚弱 和 易伤 "
+    "DESCRIPTION": "失去 2 生命，给予敌方全体 !M! 层虚弱 NL 若 ${modID}:贫血 再给予 !M! 层 易伤 NL 消耗 "
   },
   "${modID}:Armament": {
     "NAME":"武装",
@@ -232,7 +234,8 @@
   },
   "${modID}:CorrosiveGas": {
     "NAME":"腐蚀酸雾",
-    "DESCRIPTION": "失去 3 点生命, 移除敌方全体 金属化 人工制品 荆棘 多层护甲 NL 消耗"
+    "DESCRIPTION": "失去 3 点生命, 移除敌方全体 随机一项增益 NL 消耗",
+    "UPGRADE_DESCRIPTION": "失去 3 点生命, 移除敌方全体 随机一项增益， 获得一层 人工制品 NL 消耗"
   },
   "${modID}:Tear": {
     "NAME":"撕扯",
@@ -349,7 +352,7 @@
   },
   "${modID}:BloodDance": {
     "NAME":"血之舞",
-    "DESCRIPTION": "失去 2 HP, 获得 1 张*鲜血，获得 !B! 点 格挡. NL 重复 !M! 次"
+    "DESCRIPTION": "失去 2 HP, 获得 1 张 *鲜血，获得 !B! 点 格挡. NL 重复 !M! 次"
   },
   "${modID}:Simulate": {
     "NAME":"模拟",

@@ -26,15 +26,11 @@ public class GunPowder extends BaseCard{
     );
 
     public static final String ID = makeID(cardInfo.baseId);
-
-    //These will be used in the constructor. Technically you can just use the values directly,
-    //but constants at the top of the file are easy to adjust.
     private static final int HP_LOST = 2;
     private static final int DRAW = 2;
     private static final int UPG_DRAW = 1;
     private static final int BLOCK = 7;
     private static final int UPG_BLOCK = 3;
-
 
     public GunPowder() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
@@ -46,10 +42,9 @@ public class GunPowder extends BaseCard{
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new LoseHPAction(p, p, HP_LOST));
         addToBot(new GainBlockAction(p, p, block));
-    }
-
-    public void triggerOnExhaust() {
-        addToBot(new DrawCardAction(magicNumber));
+        if (p.isBloodied){
+            addToBot(new DrawCardAction(magicNumber));
+        }
     }
 
     @Override

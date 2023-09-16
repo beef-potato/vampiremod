@@ -40,6 +40,7 @@ public class Vampire extends CustomPlayer {
     public static final int STARTING_GOLD = 99;
     public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 0;
+    public static int damagedThisTurn = 0;
 
     //Strings
     private static final String ID = makeID("JVampire"); //This should match whatever
@@ -116,10 +117,14 @@ public class Vampire extends CustomPlayer {
     }
 
     @Override
+    public void onVictory() {
+        super.onVictory();
+        damagedThisTurn = 0;
+    }
+
+    @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        //List of IDs of cards for your starting deck.
-        //If you want multiple of the same card, you have to add it multiple times.
         retVal.add(Strike_V.ID);
         retVal.add(Strike_V.ID);
         retVal.add(Strike_V.ID);
@@ -160,7 +165,6 @@ public class Vampire extends CustomPlayer {
 
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        //These attack effects will be used when you attack the heart.
         return new AbstractGameAction.AttackEffect[] {
                 AbstractGameAction.AttackEffect.BLUNT_LIGHT,
                 AbstractGameAction.AttackEffect.BLUNT_LIGHT,
@@ -224,6 +228,7 @@ public class Vampire extends CustomPlayer {
 
 
     public void damage(DamageInfo info) {
+        super.damage(info);
         if ((info.owner != null) && (info.type != DamageInfo.DamageType.THORNS) && (
                 info.output - this.currentBlock > 0) && (info.type != DamageInfo.DamageType.HP_LOSS)) {
             AnimationState.TrackEntry e =
@@ -233,8 +238,15 @@ public class Vampire extends CustomPlayer {
             e.setTimeScale(6f);
             e.setEndTime(0.33f);
         }
-        super.damage(info);
-        // it a be-hit damage
+        if (info.owner == this && info.output > 0 ){
+            this.damagedThisTurn ++;
+        }
+    }
+
+    @Override
+    public void applyStartOfTurnPreDrawCards() {
+        super.applyStartOfTurnPreDrawCards();
+        this.damagedThisTurn = 0;
     }
 
     @Override

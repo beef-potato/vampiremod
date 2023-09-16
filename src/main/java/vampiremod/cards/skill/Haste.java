@@ -1,11 +1,9 @@
 package vampiremod.cards.skill;
 
 import character.Vampire;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import vampiremod.cards.BaseCard;
@@ -45,6 +43,7 @@ public class Haste extends BaseCard {
             int blood_amount = m.getPower(BleedingPower.POWER_ID).amount;
             addToBot(new RemoveSpecificPowerAction(m, p, BleedingPower.POWER_ID));
             addToBot(new MakeTempCardInHandAction(new Blood(), blood_amount));
+            addToBot(new DamageAction(m,  new DamageInfo(p, blood_amount*2, DamageInfo.DamageType.HP_LOSS)));
         }else{
             //empty
         }

@@ -53,16 +53,13 @@ public class BlackBomb extends BaseCard {
         addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
         addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn,
                 AbstractGameAction.AttackEffect.NONE));
+        if (p.isBloodied){
+            addToBot(new SFXAction("ATTACK_HEAVY"));
+            addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
+            addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn,
+                    AbstractGameAction.AttackEffect.NONE));
+        }
     }
-
-    public void triggerOnExhaust() {
-        addToBot(new DamageAllEnemiesAction(null, this.multiDamage, this.damageTypeForTurn,
-                AbstractGameAction.AttackEffect.NONE));
-
-
-    }
-
-
 
     @Override
     public AbstractCard makeCopy() {

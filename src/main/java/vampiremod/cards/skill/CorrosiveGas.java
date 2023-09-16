@@ -34,9 +34,6 @@ public class CorrosiveGas extends BaseCard {
             Vampire.Enums.CARD_COLOR //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
     );
     public static final String ID = makeID(cardInfo.baseId);
-
-    //These will be used in the constructor. Technically you can just use the values directly,
-    //but constants at the top of the file are easy to adjust.
     private static final int HP_LOST = 3;
 
 
@@ -59,10 +56,14 @@ public class CorrosiveGas extends BaseCard {
 
         for (AbstractMonster mo :AbstractDungeon.getMonsters().monsters) {
             for (AbstractPower pow : mo.powers) {
-                if (stealPowIDs.contains(pow.ID) && (!pow.canGoNegative || pow.amount > 0)) {
+                if ((pow.type == AbstractPower.PowerType.BUFF) && (!pow.canGoNegative || pow.amount > 0)) {
                     addToBot(new RemoveSpecificPowerAction(pow.owner, p, pow.ID));
+                    break;
                 }
             }
+        }
+        if (this.upgraded){
+            addToBot(new ApplyPowerAction(p, p,  new ArtifactPower(p, 1),1 ));
         }
 
     }
