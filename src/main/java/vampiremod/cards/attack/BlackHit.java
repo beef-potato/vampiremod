@@ -57,7 +57,7 @@ public class BlackHit extends BaseCard {
         addToBot(new SFXAction("INTIMIDATE"));
         addToBot(new DamageAllEnemiesAction(p, this.multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.LIGHTNING));
         for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters){
-            addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, magicNumber, false), magicNumber));
+            addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, magicNumber, false), magicNumber));
         }
     }
 
