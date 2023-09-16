@@ -1,10 +1,7 @@
 package vampiremod.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -36,6 +33,7 @@ public class BleedingPower extends BasePower implements CloneablePowerInterface 
             addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
         }
 
+        addToBot(new LoseHPAction(this.owner, AbstractDungeon.player, 2));
         addToBot(new MakeTempCardInHandAction(new Blood()));
     }
 
