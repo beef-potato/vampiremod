@@ -49,7 +49,7 @@ public class Tear extends BaseCard {
             addToBot(new AttackDamageRandomEnemyAction(this,
                     AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 
-        addToBot(new MakeTempCardInHandAction(new Injury(), 2));
+        addToBot(new MakeTempCardInHandAction(new Injury(), 1));
     }
     @Override
     public AbstractCard makeCopy() {

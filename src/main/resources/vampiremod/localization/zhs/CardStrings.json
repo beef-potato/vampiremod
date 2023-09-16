@@ -209,10 +209,6 @@
     "NAME":"哨卫",
     "DESCRIPTION": "获得 !B! 点格挡 NL 给予 !M! 层 ${modID}:流血"
   },
-  "${modID}:BattleTrance": {
-    "NAME":"战斗专注",
-    "DESCRIPTION": "失去 2 点生命，抽 !M! 张牌，丢弃其中所有非攻击牌"
-  },
   "${modID}:Coffee": {
   "NAME":"咖啡",
   "DESCRIPTION": "保留 NL 获得 !M! 点 活力 NL ${modID}:食物牌 NL 消耗性 !stslib:ex!"
@@ -240,7 +236,7 @@
   },
   "${modID}:Tear": {
     "NAME":"撕扯",
-    "DESCRIPTION": "失去 2 点生命，随机造成 !D! 点伤害 !M! 次 NL 手牌中加入两张 *受伤"
+    "DESCRIPTION": "失去 2 点生命，随机造成 !D! 点伤害 !M! 次 NL 手牌中加入一张 *受伤"
   },
   "${modID}:Boxing": {
   "NAME":"拳击",
