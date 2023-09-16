@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -40,6 +39,13 @@ public class BleedingPower extends BasePower implements CloneablePowerInterface 
         addToBot(new MakeTempCardInHandAction(new Blood()));
     }
 
+    @Override
+    public void onDeath() {
+        super.onDeath();
+        if (this.amount > 0){
+            addToBot(new HealAction(AbstractDungeon.player, this.owner, this.amount*2));
+        }
+    }
 
     public void updateDescription() {
     this.description = DESCRIPTIONS[0] ;

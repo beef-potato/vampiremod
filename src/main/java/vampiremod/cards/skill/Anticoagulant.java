@@ -31,6 +31,7 @@ public class Anticoagulant extends BaseCard{
     public Anticoagulant() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
         setMagic(BLUR_AMOUNT, UPG_BLUR_AMOUNT);
+        setExhaust(true);
     }
 
     @Override

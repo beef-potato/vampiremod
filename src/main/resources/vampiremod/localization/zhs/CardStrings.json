@@ -180,7 +180,7 @@
   },
   "${modID}:Anticoagulant": {
     "NAME":"抗凝剂",
-    "DESCRIPTION": "失去 2 点生命 NL 给予 !M! 层 *流血 "
+    "DESCRIPTION": "失去 2 点生命 NL 给予 !M! 层 *流血 NL 消耗 "
   },
   "${modID}:Ignite": {
     "NAME":"点火",
@@ -203,7 +203,7 @@
   },
   "${modID}:SuperKick": {
     "NAME":"超级飞踢",
-    "DESCRIPTION": "失去 2 点生命 NL ，造成 !D! 点伤害，若对方有 易伤 或 虚弱 ，获得 [E] 并抽一张牌 "
+    "DESCRIPTION": "失去 1 点生命 NL ，造成 !D! 点伤害，若对方有 易伤 或 虚弱 ，获得 [E] 并抽一张牌 "
   },
   "${modID}:Sentinel": {
     "NAME":"哨卫",
