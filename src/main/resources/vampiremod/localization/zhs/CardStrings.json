@@ -114,7 +114,7 @@
   },
   "${modID}:Conspiracy": {
     "NAME": "阴谋",
-    "DESCRIPTION": "失去 3 点生命， 造成 !D! 点伤害，若 斩杀 ，额外回复 !M! 点生命"
+    "DESCRIPTION": "造成 !D! 点伤害，若 斩杀 ，额外回复 !M! 点生命"
   },
   "${modID}:Sacrifice": {
     "NAME": "献祭",
@@ -122,7 +122,7 @@
   },
   "${modID}:BlackHit": {
     "NAME":"黑暗攻击",
-    "DESCRIPTION": "失去 3 点生命， 造成 !D! 点群体伤害， 给予敌方全员 !M! 层 虚弱"
+    "DESCRIPTION": "失去 2 点生命， 造成 !D! 点群体伤害， 给予敌方全员 !M! 层 易伤"
   },
   "${modID}:Pacifism": {
     "NAME":"和平主义",

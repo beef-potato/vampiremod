@@ -1,6 +1,7 @@
 package vampiremod.cards.skill;
 
 import character.Vampire;
+import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -32,15 +33,16 @@ public class BloodDance extends BaseCard {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
         setMagic(MAGIC, UPG_CARD_DRAW);
         setBlock(BLOCK);
+        cardsToPreview = new Blood();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         for ( int i=0; i < magicNumber; i++){
-            addToBot(new LoseHPAction(p,p, magicNumber*2));
+            addToBot(new LoseHPAction(p,p, 2));
             addToBot(new MakeTempCardInHandAction(new Blood(), 1));
-            addToBot(new GainBlockAction(p,p, block));
+            addToBot(new GainBlockAction(p, p, block));
         }
     }
 
