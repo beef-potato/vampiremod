@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 import vampiremod.cards.attack.Dash_V;
 import vampiremod.cards.attack.Stab;
 import vampiremod.cards.attack.Strike_V;

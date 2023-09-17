@@ -50,8 +50,9 @@ public class ConservationPower extends BasePower implements CloneablePowerInterf
             }
             if (healAmount > 0){
                 this.flash();
-                AbstractDungeon.actionManager.addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player, healAmount));
-
+                AbstractDungeon.actionManager.addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player,
+                        healAmount, 0.1F));
+//Xfast duration
             }
         }
     }

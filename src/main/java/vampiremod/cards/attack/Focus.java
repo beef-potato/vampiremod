@@ -6,10 +6,8 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import vampiremod.cards.BaseCard;
-import vampiremod.cards.skill.BloodDance;
 import vampiremod.util.CardInfo;
 
 import java.util.Objects;
@@ -19,7 +17,6 @@ import static vampiremod.vampiremod.makeID;
 public class Focus extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Focus", //Card ID. Will be prefixed with mod id, so the final ID will be "modID:MyCard" with
-            // whatever your mod's ID is.
             1, //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
             CardType.ATTACK, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
@@ -43,7 +40,7 @@ public class Focus extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 1; i<= Vampire.damagedThisTurn; i++){
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
-                AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                AbstractGameAction.AttackEffect.NONE));
         }
         this.rawDescription = cardStrings.DESCRIPTION;
         initializeDescription();

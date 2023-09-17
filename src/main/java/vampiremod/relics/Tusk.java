@@ -59,7 +59,9 @@ public class Tusk extends BaseRelic {
             if (healAmount > 0) {
                 this.flash();
                 this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                AbstractDungeon.actionManager.addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player, healAmount));
+                AbstractDungeon.actionManager.addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player,
+                        healAmount, 0.1F));
+                //XFast duration
 
             }
         }
