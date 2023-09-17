@@ -240,14 +240,14 @@ public class Vampire extends CustomPlayer {
             e.setEndTime(0.33f);
         }
         if (info.owner == this && info.output > 0 ){
-            this.damagedThisTurn ++;
+            damagedThisTurn ++;
         }
     }
 
     @Override
     public void applyStartOfTurnPreDrawCards() {
         super.applyStartOfTurnPreDrawCards();
-        this.damagedThisTurn = 0;
+        damagedThisTurn = 0;
     }
 
     @Override
@@ -281,7 +281,8 @@ public class Vampire extends CustomPlayer {
         // over heal make tempHP.
         super.heal(healAmount);
         if ((this.currentHealth >= this.maxHealth) && (healAmount > 0)){
-            AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(this, this, healAmount));
+            AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(this, this,
+                    healAmount - (AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth)));
         }
     }
 }

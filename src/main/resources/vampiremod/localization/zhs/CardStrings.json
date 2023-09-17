@@ -362,6 +362,15 @@
   "${modID}:Overdraft": {
     "NAME":"透支",
     "DESCRIPTION": "抽 !M! 张手牌， 消耗 1 张 NL 消耗"
+  },
+  "${modID}:Body Slam": {
+    "NAME":"全身撞击",
+    "DESCRIPTION": "造成等量格挡值+临时生命值的伤害",
+    "EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害。)"]
+  },
+  "${modID}:FurryOfBlows": {
+    "NAME":"疾风连击",
+    "DESCRIPTION": "造成 !D! 点伤害，每当你失去生命，从弃牌堆返回手牌。"
   }
 
 }

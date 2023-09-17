@@ -1,6 +1,7 @@
 package vampiremod.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
+import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnLoseTempHpPower;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -15,12 +16,6 @@ public class BloodShelterPower extends BasePower implements CloneablePowerInterf
     public static final String POWER_ID = makeID("BloodShelterPower");
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = true;
-
-    //The only thing this controls is the color of the number on the power icon.
-    //Turn based powers are white, non-turn based powers are red or green depending on if they're a buff or debuff.
-    //For a power to actually decrease/go away on its own they do it themselves.
-    //Look at powers that do this like VulnerablePower and DoubleTapPower.
-
     public BloodShelterPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
@@ -33,7 +28,7 @@ public class BloodShelterPower extends BasePower implements CloneablePowerInterf
     }
     @Override
     public int onLoseTempHp(DamageInfo damageInfo, int i) {
-        if (i > 0) {
+        if (i > 0 && (i <= TempHPField.tempHp.get(AbstractDungeon.player))) {
             flash();
             addToTop(new GainBlockAction(this.owner, amount));
         }

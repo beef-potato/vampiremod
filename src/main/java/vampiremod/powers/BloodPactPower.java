@@ -1,6 +1,7 @@
 package vampiremod.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
+import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnLoseTempHpPower;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -10,7 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static vampiremod.vampiremod.makeID;
 
-public class BloodPactPower extends BasePower implements CloneablePowerInterface, OnLoseTempHpPower {
+public class BloodPactPower extends BasePower implements CloneablePowerInterface, OnLoseTempHpPower{
     public static final String POWER_ID = makeID("BloodPactPower");
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = true;
@@ -28,11 +29,10 @@ public class BloodPactPower extends BasePower implements CloneablePowerInterface
 
     @Override
     public int onLoseTempHp(DamageInfo damageInfo, int i) {
-        if (i > 0) {
+        if (i > 0 && (i <= TempHPField.tempHp.get(AbstractDungeon.player))) {
             flash();
             addToTop(new DrawCardAction(AbstractDungeon.player, amount));
         }
-        // this power won't modify the damage cost
         return i;
     }
 
