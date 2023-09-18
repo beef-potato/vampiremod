@@ -65,15 +65,12 @@ public class Ignite extends BaseCard {
                     if (!Objects.equals(c.cardID, this.cardID))
                         temp_hand.add(c);
                 }
-                AbstractCard c2 = temp_hand.get(AbstractDungeon.cardRandomRng.random(p.hand.group.size() - 1));
+                AbstractCard c2 = temp_hand.get(AbstractDungeon.cardRandomRng.random(p.hand.group.size() - 2));
                 c2.exhaust = true;
                 addToBot(new NewQueueCardAction(c2, true, false, true));
 
             }
-        }else {
-            //
         }
-
     }
 
     @Override

@@ -11,11 +11,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import vampiremod.cards.BaseCard;
+import vampiremod.patch.interfaces.OnLoseTempHpCard;
 import vampiremod.util.CardInfo;
 
 import static vampiremod.vampiremod.makeID;
 
-public class FlurryOfBlows extends BaseCard implements BaseCard.OnLoseTempHpCard {
+public class FlurryOfBlows extends BaseCard implements OnLoseTempHpCard {
     private final static CardInfo cardInfo = new CardInfo(
             "FlurryOfBlows", //Card ID. Will be prefixed with mod id, so the final ID will be "modID:MyCard" with
             0, //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
@@ -39,7 +40,6 @@ public class FlurryOfBlows extends BaseCard implements BaseCard.OnLoseTempHpCard
         addToBot(new DamageAction(m, new DamageInfo(p,
                 this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
-
 
     @Override
     public void tookDamage() {
