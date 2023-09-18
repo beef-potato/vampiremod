@@ -291,10 +291,6 @@
     "NAME":"踌躇",
     "DESCRIPTION": "获得 !M! 层 ${modID}:坚不可摧 ，在弃牌堆中加入一张 *凡庸 "
   },
-  "${modID}:Lie": {
-    "NAME":"谎言",
-    "DESCRIPTION": "失去 3 点生命，造成 !D! 点伤害。 可以多次升级"
-  },
   "${modID}:Truth": {
     "NAME":"真理",
     "DESCRIPTION": "失去 3 点生命，造成 !D! 点伤害 !M! 次。 可以多次升级"

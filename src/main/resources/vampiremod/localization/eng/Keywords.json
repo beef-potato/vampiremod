@@ -49,13 +49,6 @@
   ],
   "DESCRIPTION": "You cannot lose more than a given amount of HP in a single turn. NL At the end of any round in which Invincible prevented HP loss, remove it."
 },  {
-  "PROPER_NAME": "Temporary HP",
-  "NAMES": [
-    "temp hp",
-    "temp_hp"
-  ],
-  "DESCRIPTION": "Until end of combat, prevents damage to HP."
-},  {
   "PROPER_NAME": "Blur",
   "ID": "blur",
   "NAMES": [
@@ -68,6 +61,13 @@
     "NAMES": [
       "bleeding"
     ],
-    "DESCRIPTION": "remove one stack at the end of its turn, you get one Blood when its turn end."
+    "DESCRIPTION": "deal 2 damage and remove one stack at the end of its turn, you get one Blood when its turn end. NL if monster dead, you get the remaining hp recover"
+  },
+  {
+    "PROPER_NAME": "Anemia",
+    "NAMES": [
+      "anemia"
+    ],
+    "DESCRIPTION": "you are #yanemia when your hp lower than half of max hp"
   }
 ]

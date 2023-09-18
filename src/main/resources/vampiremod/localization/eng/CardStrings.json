@@ -1,11 +1,13 @@
 {
-  "${modID}:IronWave": {
-    "NAME": "Iron Wave",
-    "DESCRIPTION": "Gain !B!   Block NL deal !D!  damage "
-  },
   "${modID}:Focus": {
     "NAME": "Focus",
-    "DESCRIPTION": "lose 4 HP  NL deal !D!  damage  !M! times NL Exhaust"
+    "DESCRIPTION": "Deal !D! damage for every damage you take this turn",
+    "EXTENDED_DESCRIPTION": [
+      " NL (you have take damage",
+      " time ）",
+      " times ）"
+    ],
+    "FLAVOR":"do not take this card when you play other characters!"
   },
   "${modID}:Rampage_V": {
     "NAME": "Rampage",
@@ -52,14 +54,6 @@
   "${modID}:Nevermind": {
     "NAME": "Shrug it Off",
     "DESCRIPTION": "lose 2 HP  NL Gain !B!  Block NL draw !M! cards"
-  },
-  "${modID}:Batform": {
-    "NAME": "Bat Form",
-    "DESCRIPTION": "Gain !M! Flight"
-  },
-  "${modID}:Trinity": {
-    "NAME": "Trinity",
-    "DESCRIPTION": "lose 6 HP  NL draw !M! cards NL enter Divinity NL die next turn"
   },
   "${modID}:Mysophobia": {
     "NAME": "Mysophobia",
@@ -112,7 +106,7 @@
   },
   "${modID}:Conspiracy": {
     "NAME": "Conspiracy",
-    "DESCRIPTION": "lose 3  HP,  deal !D!   damage , if Fatal , recover extra !M!  HP"
+    "DESCRIPTION": " deal !D!   damage , if Fatal , recover extra !M!  HP"
   },
   "${modID}:Sacrifice": {
     "NAME": "Sacrifice",
@@ -120,7 +114,7 @@
   },
   "${modID}:BlackHit": {
     "NAME":"Black Hit",
-    "DESCRIPTION": "lose 3  HP,  deal !D! damage to ALL enemies ,  Apply !M!  Weak to ALL enemies"
+    "DESCRIPTION": "lose 3  HP,  deal !D! damage to ALL enemies ,  Apply !M!  Vulnerable to ALL enemies"
   },
   "${modID}:Pacifism": {
     "NAME":"Pacifism",
@@ -157,7 +151,7 @@
   },
   "${modID}:GunPowder": {
     "NAME":"Gun Powder",
-    "DESCRIPTION": "lose 2  HP NL Gain !B!   Block NL if Exhausted , draw !M! cards . "
+    "DESCRIPTION": "lose 2  HP NL Gain !B! Block NL if ${modID}:anemia , draw !M! cards . "
   },
   "${modID}:Fire": {
     "NAME":"Fire",
@@ -165,7 +159,7 @@
   },
   "${modID}:BlackBomb": {
     "NAME":"Black Bomb",
-    "DESCRIPTION": "lose 2  HP NL deal !D!  damage to ALL enemies  NL if Exhausted, deal !M! damage to ALL enemies "
+    "DESCRIPTION": "lose 2  HP NL deal !D!  damage to ALL enemies  NL if ${modID}:anemia , deal again "
   },
   "${modID}:BurningBranch": {
     "NAME":"Burning Branch",
@@ -174,12 +168,15 @@
   },
   "${modID}:Anticoagulant": {
     "NAME":"Anticoagulant",
-    "DESCRIPTION": "lose 2  HP NL deal !M! ${modID}:Bleeding "
+    "DESCRIPTION": "lose 2  HP NL deal !M! ${modID}:bleeding NL Exhaust"
   },
   "${modID}:Ignite": {
     "NAME":"Ignite",
-    "DESCRIPTION": "lose 2  HP NL randomly Exhaust one card  , deal !D!   damage ",
-    "UPGRADE_DESCRIPTION": "lose 2  HP NL Exhaust one card , deal !D!   damage "
+    "DESCRIPTION": "lose 2 HP NL randomly Exhaust and play one card in hand, deal !D! damage",
+    "UPGRADE_DESCRIPTION": "lose 2 HP NL Exhaust and play one card in hand, deal !D! damage",
+    "EXTENDED_DESCRIPTION": [
+      "Exhaust and play one card "
+    ]
   },
   "${modID}:BurntCoin": {
     "NAME":"Burnt Coin",
@@ -191,51 +188,16 @@
   },
   "${modID}:Intimidate": {
     "NAME":"Intimidate",
-    "DESCRIPTION": "lose 2 HP, Apply !M! Weak to ALL enemies NL if Exhausted , Apply !M!  Weak and Vulnerable to ALL enemies"
-  },
-  "${modID}:Armament": {
-    "NAME":"Armament",
-    "DESCRIPTION": "lose 2  HP NL , Gain !B!  Block, 升级一张手牌 ",
-    "UPGRADE_DESCRIPTION": "lose 2  HP NL , Gain !B!  Block, 升级所有手牌 ",
-    "PS": "DEPRECATED"
+    "DESCRIPTION": "lose 2 HP, Apply !M! Weak to ALL enemies NL if ${modID}:anemia , Apply !M!  Weak and Vulnerable to ALL enemies NL Exhaust"
   },
   "${modID}:SuperKick": {
     "NAME":"Super Kick",
     "DESCRIPTION": "lose 2  HP NL , deal !D!   damage , if the enemy has Vulnerable or Weak , Gain [E] and draw one card "
   },
-  "${modID}:Sentinel": {
-    "NAME":"Sentinel",
-    "DESCRIPTION": "lose 2  HP NL , Gain !B!  Block, if Exhausted , Gain [E] [E] ",
-    "UPGRADE_DESCRIPTION": "lose 2  HP NL , Gain !B!  Block, if Exhaust, Gain [E] [E] [E]"
-  },
-  "${modID}:BattleTrance": {
-    "NAME":"Battle Trance",
-    "DESCRIPTION": "lose 2  HP, draw !M! cards, discard all non-attack cards"
-  },
-  "${modID}:Coffee": {
-  "NAME":"Coffee",
-  "DESCRIPTION": "Retain NL Gain !M!   Vigor NL ${modID}:Food NL Exhaustive !stslib:ex!"
-  },
-  "${modID}:BlackTea": {
-    "NAME":"BlackTea",
-    "DESCRIPTION": "Retain NL Gain !M!   temp Strength NL ${modID}:Food NL Exhaustive !stslib:ex!"
-  },
-  "${modID}:GreenTea": {
-    "NAME":"GreenTea",
-    "DESCRIPTION": "Retain NL Gain !M!  temp Dexterity NL ${modID}:Food NL Exhaust"
-  },
-  "${modID}:MysteryMeat": {
-    "NAME":"Mystery Meat",
-    "DESCRIPTION": "Retain NL gain !M!  HP, 60% Gain !M! poison NL ${modID}:Food NL Exhaustive !stslib:ex!"
-  },
-  "${modID}:Shortcake": {
-    "NAME":"Short cake",
-    "DESCRIPTION": "Retain NL Gain [E] [E] NL Exhaust NL ${modID}:Food",
-    "UPGRADE_DESCRIPTION": "Retain NL Gain [E] [E] [E] NL Exhaust NL ${modID}:Food"
-  },
   "${modID}:CorrosiveGas": {
     "NAME":"Corrosive Gas",
-    "DESCRIPTION": "lose 3  HP, remove ALL enemies' Metallicize, Artifact, Thorns, Plated Armor NL Exhaust"
+    "DESCRIPTION": "lose 3  HP, remove one random Buff from all enemies  NL Exhaust",
+    "UPGRADE_DESCRIPTION": "lose 3  HP, remove one random Buff from all enemies NL gain one Artifact  NL Exhaust"
   },
   "${modID}:Tear": {
     "NAME":"Tear",
@@ -288,10 +250,6 @@
     "NAME":"Hesitate",
     "DESCRIPTION": "Gain !M!  ${modID}:Invincible , add one  *Normality in your discard pile "
   },
-  "${modID}:Lie": {
-    "NAME":"Lie",
-    "DESCRIPTION": "lose 3  HP, deal !D!   damage NL Can be Upgraded any number of times"
-  },
   "${modID}:Truth": {
     "NAME":"Truth",
     "DESCRIPTION": "lose 3  HP, deal !D!   damage  !M! times NL Can be Upgraded any number of times"
@@ -326,7 +284,7 @@
   },
   "${modID}:Roulette": {
     "NAME":"Roulette",
-    "DESCRIPTION": "when you draw this card, randomly deal !D!  damage to one target in the room if target at player, gain 1/2 Block, discard itself"
+    "DESCRIPTION": "Autoplay NL randomly deal !D!  damage to one target in the room if target at player, gain 1/2 Block"
   },
   "${modID}:Blood": {
     "NAME":"Blood",
@@ -334,7 +292,7 @@
   },
   "${modID}:Stab": {
     "NAME":"Stab",
-    "DESCRIPTION": "deal !D! damage NL deal !M! ${modID}:Bleeding NL Exhaust"
+    "DESCRIPTION": "deal !D! damage NL deal !M! ${modID}:bleeding NL Exhaust"
   },
   "${modID}:GreedySword": {
     "NAME":"Greedy Sword",
@@ -347,12 +305,12 @@
   },
   "${modID}:Haste": {
     "NAME":"Haste",
-    "DESCRIPTION": "lose 2 HP NL remove target's all ${modID}:Bleeding and take the *Blood NL Exhaust",
-    "EXTENDED_DESCRIPTION": ["No *Bleeding"]
+    "DESCRIPTION": "lose 2 HP NL remove target's all ${modID}:bleeding and take the *Blood NL Exhaust",
+    "EXTENDED_DESCRIPTION": ["No *bleeding"]
   },
   "${modID}:BloodDance": {
     "NAME":"Blood Dance",
-    "DESCRIPTION": "lose 2 HP, get 1 *Blood, gain !B! Block . NL repeat !M! 次"
+    "DESCRIPTION": "lose 2 HP, get 1 *Blood, gain !B! Block . NL repeat !M! times"
   },
   "${modID}:Simulate": {
     "NAME":"Simulate",
@@ -362,6 +320,15 @@
   "${modID}:Overdraft": {
     "NAME":"Overdraft",
     "DESCRIPTION": "draw !M! cards, Exhaust 1 card NL Exhaust"
+  },
+  "${modID}:Body Slam": {
+    "NAME":"Body Slam",
+    "DESCRIPTION": " deal damage equal to your block and temporary_hp",
+    "EXTENDED_DESCRIPTION": [" NL ( deal  !D! damage.)"]
+  },
+  "${modID}:FlurryOfBlows": {
+    "NAME":"Flurry Of Blows",
+    "DESCRIPTION": " deal  !D! damage , when you lose hp, return from discard pile to your hand."
   }
 
 }

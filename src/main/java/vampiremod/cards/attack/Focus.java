@@ -26,13 +26,14 @@ public class Focus extends BaseCard {
     );
     public static final String ID = makeID(cardInfo.baseId);
     private static final int DAMAGE = 6;
+    private static final int UPG_DAMAGE = 2;
     private static final int UPG_ATTACK_TIMES = 3;
     private static final int ATTACK_TIMES = 5;
 
 
     public Focus() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
-        setDamage(DAMAGE); //Sets the card's damage and how much it increases when upgraded.
+        setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it increases when upgraded.
         setMagic(ATTACK_TIMES, UPG_ATTACK_TIMES);
     }
 
@@ -40,7 +41,7 @@ public class Focus extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 1; i<= Vampire.damagedThisTurn; i++){
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
-                AbstractGameAction.AttackEffect.NONE));
+                AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
         this.rawDescription = cardStrings.DESCRIPTION;
         initializeDescription();
