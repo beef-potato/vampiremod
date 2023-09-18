@@ -1,7 +1,7 @@
 package vampiremod.cards;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import vampiremod.vampiremod;
 import vampiremod.util.CardInfo;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -180,6 +180,9 @@ public abstract class BaseCard extends CustomCard {
         this.selfRetain = baseRetain;
     }
 
+    public interface  OnLoseTempHpCard {
+        int onLoseTempHp(DamageInfo var1, int var2);
+    }
 
     @Override
     public AbstractCard makeStatEquivalentCopy() {

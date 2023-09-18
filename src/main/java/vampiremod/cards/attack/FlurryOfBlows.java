@@ -2,7 +2,6 @@ package vampiremod.cards.attack;
 
 import character.Vampire;
 import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnLoseTempHpPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
@@ -16,9 +15,9 @@ import vampiremod.util.CardInfo;
 
 import static vampiremod.vampiremod.makeID;
 
-public class FurryOfBlows extends BaseCard implements OnLoseTempHpPower {
+public class FlurryOfBlows extends BaseCard implements BaseCard.OnLoseTempHpCard {
     private final static CardInfo cardInfo = new CardInfo(
-            "FurryOfBlows", //Card ID. Will be prefixed with mod id, so the final ID will be "modID:MyCard" with
+            "FlurryOfBlows", //Card ID. Will be prefixed with mod id, so the final ID will be "modID:MyCard" with
             0, //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
             CardType.ATTACK, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
@@ -30,7 +29,7 @@ public class FurryOfBlows extends BaseCard implements OnLoseTempHpPower {
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 2;
 
-    public FurryOfBlows() {
+    public FlurryOfBlows() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it increases when upgraded.
     }
@@ -56,10 +55,9 @@ public class FurryOfBlows extends BaseCard implements OnLoseTempHpPower {
         return i;
     }
 
-
     @Override
     public AbstractCard makeCopy() {
-        return new FurryOfBlows();
+        return new FlurryOfBlows();
     }
 
 

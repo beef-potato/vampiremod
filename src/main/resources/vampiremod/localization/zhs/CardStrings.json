@@ -186,8 +186,11 @@
   },
   "${modID}:Ignite": {
     "NAME":"点火",
-    "DESCRIPTION": "失去 2 点生命 NL 随机消耗一张牌，造成 !D! 点伤害",
-    "UPGRADE_DESCRIPTION": "失去 2 点生命 NL 消耗一张牌，造成 !D! 点伤害"
+    "DESCRIPTION": "失去 2 点生命 NL 随机 消耗 并打出一张牌，造成 !D! 点伤害",
+    "UPGRADE_DESCRIPTION": "失去 2 点生命 NL 消耗 并打出一张牌，造成 !D! 点伤害",
+    "EXTENDED_DESCRIPTION": [
+      "打出并消耗一张牌"
+    ]
   },
   "${modID}:Gentleman": {
     "NAME":"绅士",
@@ -368,7 +371,7 @@
     "DESCRIPTION": "造成等量格挡值+临时生命值的伤害",
     "EXTENDED_DESCRIPTION": [" NL (造成 !D! 点伤害。)"]
   },
-  "${modID}:FurryOfBlows": {
+  "${modID}:FlurryOfBlows": {
     "NAME":"疾风连击",
     "DESCRIPTION": "造成 !D! 点伤害，每当你失去生命，从弃牌堆返回手牌。"
   }
