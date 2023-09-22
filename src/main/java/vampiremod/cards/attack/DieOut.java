@@ -1,6 +1,7 @@
 package vampiremod.cards.attack;
 
 import character.Vampire;
+import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
@@ -28,11 +29,14 @@ public class DieOut extends BaseCard {
     private static final int DAMAGE = 11;
     private static final int UPG_DAMAGE = 5;
     private static final int Exhaust_NUM = 1;
+    private static final int Exhaustive_NUM = 5;
+    private static final int UPG_Exhaustive_NUM = 3;
     private static final int HP_LOST = 1;
 
     public DieOut() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it increases when upgraded.
+        ExhaustiveVariable.setBaseValue(this, Exhaustive_NUM);
     }
 
     @Override
@@ -42,6 +46,7 @@ public class DieOut extends BaseCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }
+
     public void onMoveToDiscard() {
         addToBot(new DiscardToHandAction(DieOut.this));
     }
@@ -49,6 +54,14 @@ public class DieOut extends BaseCard {
     @Override
     public AbstractCard makeCopy() {
         return new DieOut();
+    }
+
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            ExhaustiveVariable.upgrade(this, UPG_Exhaustive_NUM);
+        }
     }
 
 }

@@ -143,7 +143,7 @@
   },
   "${modID}:DieOut": {
     "NAME":"Die Out",
-    "DESCRIPTION": "lose 2  HP NL deal !D!   damage  NL Exhaust one card, return to hand "
+    "DESCRIPTION": "lose 2  HP NL deal !D!   damage  NL Exhaust one card NL Exhaustive !stslib:ex!"
   },
   "${modID}:BloodArmor": {
     "NAME":"Blood Armor",
@@ -319,7 +319,7 @@
   },
   "${modID}:Overdraft": {
     "NAME":"Overdraft",
-    "DESCRIPTION": "draw !M! cards, Exhaust 1 card NL Exhaust"
+    "DESCRIPTION": "lose 2 HP NL draw !M! cards, Exhaust 1 card NL Exhaust"
   },
   "${modID}:Body Slam": {
     "NAME":"Body Slam",

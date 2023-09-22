@@ -279,8 +279,14 @@ public class Vampire extends CustomPlayer {
     @Override
     public void heal(int healAmount) {
         // over heal make tempHP.
-        int minus = (AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth);
-        super.heal(healAmount);
+        int ch = AbstractDungeon.player.currentHealth;
+        int mh = AbstractDungeon.player.maxHealth;
+        int minus = (mh - ch);
+        if (ch < mh){
+            super.heal(healAmount);
+            //if (ch == mh, don't need double animation)
+        }
+
         if (healAmount > minus){
             AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(this, this,
                     (healAmount - minus)));

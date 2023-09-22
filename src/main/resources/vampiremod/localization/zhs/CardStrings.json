@@ -157,7 +157,7 @@
   },
   "${modID}:DieOut": {
     "NAME":"消亡",
-    "DESCRIPTION": "失去 1 点生命 NL 造成 !D! 点伤害 NL 消耗一张牌，返回手牌 "
+    "DESCRIPTION": "失去 1 点生命 NL 造成 !D! 点伤害 NL 消耗一张牌 NL 消耗性 !stslib:ex!"
   },
   "${modID}:BloodArmor": {
     "NAME":"血铠",
@@ -360,7 +360,7 @@
   },
   "${modID}:Overdraft": {
     "NAME":"透支",
-    "DESCRIPTION": "抽 !M! 张手牌， 消耗 1 张 NL 消耗"
+    "DESCRIPTION": "失去 2 点生命 NL 抽 !M! 张手牌， 消耗 1 张 NL 消耗"
   },
   "${modID}:Body Slam": {
     "NAME":"全身撞击",
