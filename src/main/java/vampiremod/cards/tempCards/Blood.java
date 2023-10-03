@@ -40,7 +40,7 @@ public class Blood extends BaseCard{
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new HealAction(p, p, magicNumber));
+        addToBot(new HealAction(p, p, magicNumber, 0.1f));
     }
 
 

@@ -47,8 +47,8 @@ public class Dash_V extends BaseCard {
         addToBot(new LoseHPAction(p, p, HP_LOST));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL),
                 AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        addToBot(new ApplyPowerAction(m, p, new VulnerablePower(p, magicNumber, false), magicNumber));
-        addToBot(new ApplyPowerAction(m, p, new WeakPower(p, 1, false)));
+        addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false), magicNumber));
+        addToBot(new ApplyPowerAction(m, p, new WeakPower(m, 1, false), 1));
 
     }
 

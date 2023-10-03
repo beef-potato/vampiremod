@@ -44,6 +44,7 @@ public class Intimidate extends BaseCard {
     public Intimidate() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
         setMagic(AMOUNT, UPG_AMOUNT);
+        setExhaust(true);
     }
 
     @Override
