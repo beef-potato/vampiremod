@@ -28,10 +28,6 @@ public class Gentleman extends BaseCard{
     );
 
     public static final String ID = makeID(cardInfo.baseId);
-
-    //These will be used in the constructor. Technically you can just use the values directly,
-    //but constants at the top of the file are easy to adjust.
-
     private static final int HP_LOST = 2;
     private static final int STUN_AMOUNT = 1;
     private static final int BLOCK = 20;

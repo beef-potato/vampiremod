@@ -29,7 +29,7 @@
   "${modID}:FamiliarPower": {
     "NAME": "Familiar",
     "DESCRIPTIONS": [
-      "when you gain 10 Familiar, gain 1 intangible"
+      "when you gain 10 Familiar, gain 1 intangible and double your damage"
     ]
   },
   "${modID}:Prey mark": {

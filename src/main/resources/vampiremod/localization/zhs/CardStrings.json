@@ -370,6 +370,10 @@
   "${modID}:FlurryOfBlows": {
     "NAME":"疾风连击",
     "DESCRIPTION": "造成 !D! 点伤害，每当你失去生命，从弃牌堆返回手牌。"
+  },
+  "${modID}:Pray": {
+    "NAME":"祈祷",
+    "DESCRIPTION": "获得 !M! 层 ${modID}:熟悉 ， 将一张 *洞见 加入抽牌堆 "
   }
 
 }

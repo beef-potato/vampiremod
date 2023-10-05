@@ -25,7 +25,7 @@
     "NAMES": [
       "familiar"
     ],
-    "DESCRIPTION": "when you gain 10 Familiar, gain 1 *intangible"
+    "DESCRIPTION": "when you gain 10 Familiar, gain 1 *intangible and double the damage"
   },
   {
     "PROPER_NAME": "Pickup",

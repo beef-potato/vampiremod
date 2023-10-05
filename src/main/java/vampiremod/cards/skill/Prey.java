@@ -16,7 +16,6 @@ import static vampiremod.vampiremod.makeID;
 public class Prey extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Prey", //Card ID. Will be prefixed with mod id, so the final ID will be "modID:MyCard" with
-            // whatever your mod's ID is.
             -1, //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
             CardType.SKILL, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to

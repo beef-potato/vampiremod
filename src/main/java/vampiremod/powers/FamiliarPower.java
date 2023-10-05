@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.DoubleDamagePower;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
 
@@ -14,11 +15,6 @@ public class FamiliarPower extends BasePower implements CloneablePowerInterface 
     public static final String POWER_ID = makeID("FamiliarPower");
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
-
-    //The only thing this controls is the color of the number on the power icon.
-    //Turn based powers are white, non-turn based powers are red or green depending on if they're a buff or debuff.
-    //For a power to actually decrease/go away on its own they do it themselves.
-    //Look at powers that do this like VulnerablePower and DoubleTapPower.
 
     public FamiliarPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
@@ -32,6 +28,7 @@ public class FamiliarPower extends BasePower implements CloneablePowerInterface 
         super.stackPower(stackAmount);
         if (this.amount >= 10) {
             this.addToBot(new ApplyPowerAction(this.owner , this.owner, new IntangiblePlayerPower(this.owner, 1)));
+            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new DoubleDamagePower(this.owner, 1, false)));
             this.amount -= 10;
         }
     }

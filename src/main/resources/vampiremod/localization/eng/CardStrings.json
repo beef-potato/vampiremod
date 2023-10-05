@@ -329,6 +329,10 @@
   "${modID}:FlurryOfBlows": {
     "NAME":"Flurry Of Blows",
     "DESCRIPTION": " deal  !D! damage , when you lose hp, return from discard pile to your hand."
+  },
+  "${modID}:Pray": {
+    "NAME":"Pray",
+    "DESCRIPTION": "gain !M!  ${modID}:familiar , shuffle one *Insight into  your draw pile"
   }
 
 }

@@ -29,7 +29,7 @@
   "${modID}:FamiliarPower": {
     "NAME": "熟悉",
     "DESCRIPTIONS": [
-      "获得 #b 10 层 #y 熟悉 时，获得 1 层 #y 无实体 "
+      "获得 #b 10 层 #y 熟悉 时，获得 1 层 #y 无实体 , 伤害翻倍"
     ]
   },
   "${modID}:Prey mark": {
