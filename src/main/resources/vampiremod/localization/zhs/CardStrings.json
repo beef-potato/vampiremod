@@ -255,7 +255,7 @@
   },
   "${modID}:Minimalism": {
     "NAME":"极简主义",
-    "DESCRIPTION": "失去 3 点生命， 消耗 抽牌堆和弃牌堆所有手牌 NL 消耗"
+    "DESCRIPTION": "失去 3 点生命， 消耗 抽牌堆和弃牌堆所有卡牌 NL 消耗"
   },
   "${modID}:Bacchanalia": {
     "NAME":"狂欢",

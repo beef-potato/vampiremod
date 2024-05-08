@@ -98,5 +98,9 @@
   "${modID}:BleedingPower": {
     "NAME": "流血",
     "DESCRIPTIONS":["每回合开始失去一层，回合结束时，失去 2 生命 NL 你获得一张 鲜血 NL 若怪物死亡，你回复相应的生命"]
+  },
+  "${modID}:Rupture_BPower": {
+    "NAME": "撕裂",
+    "DESCRIPTIONS": ["每当从卡牌失去生命， 获得 #y", "点力量"]
   }
 }

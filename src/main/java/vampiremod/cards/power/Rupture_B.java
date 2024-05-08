@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.RupturePower;
 import vampiremod.cards.BaseCard;
+import vampiremod.powers.Rupture_BPower;
 import vampiremod.util.CardInfo;
 
 import static vampiremod.vampiremod.makeID;
@@ -45,7 +46,7 @@ public class Rupture_B extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new RupturePower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new Rupture_BPower(p, magicNumber), magicNumber));
     }
 
     @Override

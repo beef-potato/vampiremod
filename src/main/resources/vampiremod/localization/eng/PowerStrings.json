@@ -94,5 +94,12 @@
       " in a turn. Removed after #b",
       " activations."
     ]
+  },
+  "${modID}:Rupture_BPower": {
+    "NAME": "Rupture",
+    "DESCRIPTIONS": [
+      "Everytime you lose hp from card, gain #y",
+      "Strength"
+    ]
   }
 }

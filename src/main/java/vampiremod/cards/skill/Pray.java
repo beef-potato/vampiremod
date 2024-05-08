@@ -33,7 +33,7 @@ public class Pray extends BaseCard {
 
     public Pray() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
-        setMagic(MAGIC);
+        setMagic(MAGIC, 1);
         cardsToPreview = new Insight();
     }
 
